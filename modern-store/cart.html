@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Savat | TechZone</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-mode">
+  <!-- Header -->
+  <header class="header">
+    <div class="top-header">
+      <div class="container">
+        <div class="top-header-content">
+          <div class="logo-container">
+            <div class="logo">
+              <a href="index.html" class="logo-link">
+                <img src="./img/l34lGjplOIrJWo9PbhujrGmeuA.avif" alt="TechZone" style="width: 50px;height: 50px;">
+                <span>Zenwood</span>
+              </a>
+            </div>
+            
+            <div class="main-categories-dropdown">
+              <button class="categories-btn" id="categories-btn">
+                <i class="fas fa-bars"></i>
+                <span>Kategoriyalar</span>
+              </button>
+              <div class="main-categories-menu" id="main-categories-menu">
+                <div class="categories-grid">
+                  <div class="categories-column">
+                    <h3 class="categories-title">Elektronika</h3>
+                    <ul class="categories-list">
+                      <li><a href="#">Smartfonlar</a></li>
+                      <li><a href="#">Noutbuklar</a></li>
+                      <li><a href="#">Planshetlar</a></li>
+                      <li><a href="#">Televizorlar</a></li>
+                      <li><a href="#">Kameralar</a></li>
+                    </ul>
+                  </div>
+                  <div class="categories-column">
+                    <h3 class="categories-title">Kompyuter texnikasi</h3>
+                    <ul class="categories-list">
+                      <li><a href="#">Protsessorlar</a></li>
+                      <li><a href="#">Videokartalar</a></li>
+                      <li><a href="#">Monitorlar</a></li>
+                      <li><a href="#">Klaviaturalar</a></li>
+                      <li><a href="#">Sichqonchalar</a></li>
+                    </ul>
+                  </div>
+                  <div class="categories-column">
+                    <h3 class="categories-title">Maishiy texnika</h3>
+                    <ul class="categories-list">
+                      <li><a href="#">Muzlatgichlar</a></li>
+                      <li><a href="#">Kir yuvish mashinalari</a></li>
+                      <li><a href="#">Gaz plitalari</a></li>
+                      <li><a href="#">Konditsionerlar</a></li>
+                      <li><a href="#">Changyutgichlar</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="right-section">
+            <div class="theme-toggle" id="theme-toggle">
+              <i class="fas fa-sun light-icon"></i>
+              <i class="fas fa-moon dark-icon"></i>
+            </div>
+            
+            <div class="language-dropdown">
+              <button class="language-btn">
+                <img src="https://placehold.co/20x20/333/fff?text=UZ" alt="O'zbekcha">
+                <span>O'zbekcha</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="language-dropdown-menu">
+                <a href="#" class="language-option active" data-lang="uz">
+                  <img src="https://placehold.co/20x20/333/fff?text=UZ" alt="O'zbekcha">
+                  <span>O'zbekcha</span>
+                </a>
+                <a href="#" class="language-option" data-lang="ru">
+                  <img src="https://placehold.co/20x20/333/fff?text=RU" alt="Русский">
+                  <span>Русский</span>
+                </a>
+                <a href="#" class="language-option" data-lang="en">
+                  <img src="https://placehold.co/20x20/333/fff?text=EN" alt="English">
+                  <span>English</span>
+                </a>
+              </div>
+            </div>
+            
+            <div class="user-account-dropdown">
+              <button class="account-btn">
+                <i class="fas fa-user"></i>
+                <span>Hisob</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="account-dropdown-menu">
+                <a href="./login.html" class="account-option">
+                  <i class="fas fa-sign-in-alt"></i>
+                  <span>Kirish</span>
+                </a>
+                <a href="./register.html" class="account-option">
+                  <i class="fas fa-user-plus"></i>
+                  <span>Register</span>
+                </a>
+                <a href="#" class="account-option">
+                  <i class="fas fa-question-circle"></i>
+                  <span>Yordam bo'limi</span>
+                </a>
+                <a href="#" class="account-option">
+                  <i class="fas fa-sign-out-alt"></i>
+                  <span>Xisobdan chiqish</span>
+                </a>
+              </div>
+            </div>
+            <button class="search-trigger" id="search-trigger">
+              <i class="fas fa-search"></i>
+            </button>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+              <i class="fas fa-ellipsis-v"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="header-divider"></div>
+    
+    <div class="bottom-header">
+      <div class="container">
+        <div class="bottom-header-content">
+          <nav class="main-nav" id="main-nav">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link" style="white-space: nowrap;">Bosh sahifa</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link">Kategoriyalar <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-menu">
+                  <div class="dropdown-grid">
+                    <div class="dropdown-column">
+                      <h3 class="dropdown-title">Elektronika</h3>
+                      <ul class="dropdown-list">
+                        <li><a href="#">Smartfonlar</a></li>
+                        <li><a href="#">Noutbuklar</a></li>
+                        <li><a href="#">Planshetlar</a></li>
+                        <li><a href="#">Televizorlar</a></li>
+                        <li><a href="#">Kameralar</a></li>
+                      </ul>
+                    </div>
+                    <div class="dropdown-column">
+                      <h3 class="dropdown-title">Kompyuter texnikasi</h3>
+                      <ul class="dropdown-list">
+                        <li><a href="#">Protsessorlar</a></li>
+                        <li><a href="#">Videokartalar</a></li>
+                        <li><a href="#">Monitorlar</a></li>
+                        <li><a href="#">Klaviaturalar</a></li>
+                        <li><a href="#">Sichqonchalar</a></li>
+                      </ul>
+                    </div>
+                    <div class="dropdown-column">
+                      <h3 class="dropdown-title">Maishiy texnika</h3>
+                      <ul class="dropdown-list">
+                        <li><a href="#">Muzlatgichlar</a></li>
+                        <li><a href="#">Kir yuvish mashinalari</a></li>
+                        <li><a href="#">Gaz plitalari</a></li>
+                        <li><a href="#">Konditsionerlar</a></li>
+                        <li><a href="#">Changyutgichlar</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Yangiliklar</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Chegirmalar</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link" style="white-space: nowrap;">Ko'p sotilgan</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link" style="white-space: nowrap;">Yangi kelgan</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Aksiyalar</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link" style="white-space: nowrap;">Biz haqimizda</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Aloqa</a>
+              </li>
+              <li class="nav-item">
+                <div class="cart-icon">
+                  <a href="cart.html" class="action-link active">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Cart Section -->
+  <section class="cart-section">
+    <div class="container">
+      <h1 class="page-title">Savat</h1>
+      
+      <div class="empty-cart" id="empty-cart" style="display: none;">
+        <div class="empty-cart-image">
+          <img src="https://placehold.co/200x200/333/fff?text=Empty+Cart" alt="Empty Cart">
+        </div>
+        <h2 class="empty-cart-title">Savatingiz bo'sh</h2>
+        <p class="empty-cart-description">Siz hali hech qanday mahsulot qo'shmagansiz. Mahsulotlarni ko'rib chiqish uchun bosh sahifaga qayting.</p>
+        <a href="index.html" class="empty-cart-btn">Xarid qilishni boshlash</a>
+      </div>
+      
+      <div class="cart-content" id="cart-content">
+        <div class="cart-items">
+          <div class="cart-header">
+            <div class="cart-select-all">
+              <input type="checkbox" id="select-all" checked>
+              <label for="select-all">Hammasini tanlash</label>
+            </div>
+            <button class="cart-clear-btn" id="clear-cart">Savatni tozalash</button>
+          </div>
+          
+          <div class="cart-items-list" id="cart-items-list">
+            <!-- Cart items will be inserted here by JavaScript -->
+          </div>
+        </div>
+        
+        <div class="cart-summary">
+          <div class="cart-summary-content">
+            <h3 class="summary-title">Buyurtma ma'lumotlari</h3>
+            <div class="summary-row">
+              <span>Mahsulotlar:</span>
+              <span id="cart-total-count">0 dona</span>
+            </div>
+            <div class="summary-row">
+              <span>Jami:</span>
+              <span id="cart-subtotal">0 so'm</span>
+            </div>
+            <div class="summary-row discount">
+              <span>Chegirma:</span>
+              <span id="cart-discount">0 so'm</span>
+            </div>
+            <div class="summary-row total">
+              <span>Jami to'lov:</span>
+              <span id="cart-total">0 so'm</span>
+            </div>
+            
+            <div class="delivery-options">
+              <h4>Yetkazib berish usuli</h4>
+              <div class="delivery-option">
+                <input type="radio" id="delivery-courier" name="delivery" checked>
+                <label for="delivery-courier">Kuryer orqali (25,000 so'm)</label>
+              </div>
+              <div class="delivery-option">
+                <input type="radio" id="delivery-pickup" name="delivery">
+                <label for="delivery-pickup">O'zim olib ketaman (bepul)</label>
+              </div>
+            </div>
+            
+            <div class="payment-options">
+              <h4>To'lov usuli</h4>
+              <div class="payment-option">
+                <input type="radio" id="payment-card" name="payment" checked>
+                <label for="payment-card">Karta orqali</label>  name="payment" checked>
+                <label for="payment-card">Karta orqali</label>
+              </div>
+              <div class="payment-option">
+                <input type="radio" id="payment-cash" name="payment">
+                <label for="payment-cash">Naqd pul orqali</label>
+              </div>
+              <div class="payment-option">
+                <input type="radio" id="payment-installment" name="payment">
+                <label for="payment-installment">Bo'lib to'lash</label>
+              </div>
+            </div>
+            
+            <a href="./payment-card.html" class="checkout-btn" id="checkout-btn">Buyurtma berish</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-column">
+          <div class="footer-logo">
+            <img src="./img/l34lGjplOIrJWo9PbhujrGmeuA.avif" alt="TechZone">
+            <h2>Zenwood</h2>
+          </div>
+          <p class="footer-description">Zamonaviy texnologiyalar va gadjetlar do'koni. Biz sifatli mahsulotlar va ajoyib xizmat bilan mijozlarimizga xizmat ko'rsatishdan faxrlanamiz.</p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-heading">Kategoriyalar</h3>
+          <ul class="footer-links">
+            <li><a href="#">Smartfonlar</a></li>
+            <li><a href="#">Noutbuklar</a></li>
+            <li><a href="#">Planshetlar</a></li>
+            <li><a href="#">Televizorlar</a></li>
+            <li><a href="#">Audio</a></li>
+            <li><a href="#">Kameralar</a></li>
+            <li><a href="#">Aksessuarlar</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-heading">Ma'lumot</h3>
+          <ul class="footer-links">
+            <li><a href="#">Biz haqimizda</a></li>
+            <li><a href="#">Yetkazib berish</a></li>
+            <li><a href="#">To'lov usullari</a></li>
+            <li><a href="#">Kafolat shartlari</a></li>
+            <li><a href="#">Maxfiylik siyosati</a></li>
+            <li><a href="#">Foydalanish shartlari</a></li>
+            <li><a href="#">Ko'p so'raladigan savollar</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-heading">Mijozlarga xizmat</h3>
+          <ul class="footer-links">
+            <li><a href="#">Mening hisobim</a></li>
+            <li><a href="#">Buyurtmalar tarixi</a></li>
+            <li><a href="#">Istaklar ro'yxati</a></li>
+            <li><a href="#">Qaytarish</a></li>
+            <li><a href="#">Qo'llab-quvvatlash</a></li>
+            <li><a href="#">Shikoyatlar</a></li>
+            <li><a href="#">Aloqa</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-heading">Biz bilan bog'lanish</h3>
+          <ul class="contact-info">
+            <li><i class="fas fa-map-marker-alt"></i> <span>Toshkent sh., Mustaqillik ko'chasi, 15-uy</span></li>
+            <li><i class="fas fa-phone"></i> <span>+998 90 123 45 67</span></li>
+            <li><i class="fas fa-envelope"></i> <span>info@techzone.uz</span></li>
+            <li><i class="fas fa-clock"></i> <span>Ish vaqti: 9:00 - 20:00</span></li>
+          </ul>
+          <div class="app-downloads">
+            <h4>Mobil ilovamizni yuklab oling</h4>
+            <div class="app-buttons">
+              <a href="#" class="app-button">
+                <img src="https://placehold.co/120x40/333/fff?text=App+Store" alt="App Store">
+              </a>
+              <a href="#" class="app-button">
+                <img src="https://placehold.co/120x40/333/fff?text=Google+Play" alt="Google Play">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-middle">
+        <div class="payment-methods">
+          <h4>To'lov usullari</h4>
+          <div class="payment-icons">
+            <img src="https://placehold.co/50x30/333/fff?text=Visa" alt="Visa">
+            <img src="https://placehold.co/50x30/333/fff?text=MasterCard" alt="MasterCard">
+            <img src="https://placehold.co/50x30/333/fff?text=PayPal" alt="PayPal">
+            <img src="https://placehold.co/50x30/333/fff?text=Uzcard" alt="Uzcard">
+            <img src="https://placehold.co/50x30/333/fff?text=Humo" alt="Humo">
+            <img src="https://placehold.co/50x30/333/fff?text=Click" alt="Click">
+            <img src="https://placehold.co/50x30/333/fff?text=Payme" alt="Payme">
+          </div>
+        </div>
+        <div class="partners">
+          <h4>Hamkorlar</h4>
+          <div class="partner-logos">
+            <img src="https://placehold.co/80x40/333/fff?text=Apple" alt="Apple">
+            <img src="https://placehold.co/80x40/333/fff?text=Samsung" alt="Samsung">
+            <img src="https://placehold.co/80x40/333/fff?text=Sony" alt="Sony">
+            <img src="https://placehold.co/80x40/333/fff?text=LG" alt="LG">
+            <img src="https://placehold.co/80x40/333/fff?text=HP" alt="HP">
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2025 TechZone. Barcha huquqlar himoyalangan.</p>
+        <div class="footer-nav">
+          <a href="#">Maxfiylik siyosati</a>
+          <a href="#">Foydalanish shartlari</a>
+          <a href="#">Sayt xaritasi</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>

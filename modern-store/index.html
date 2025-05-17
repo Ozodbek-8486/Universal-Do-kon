@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zenvod | Zamonaviy Texnologiyalar</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/product-details.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-mode">
+  
+  <div class="welcome-overlay" id="welcome-overlay">
+    <div class="welcome-background">
+      <img src="./img/zenvod.jpg" alt="Background" class="welcome-bg-image">
+    </div>
+    <div class="welcome-content">
+      <h1 class="welcome-text">Zenwood store</h1>
+      <div class="logo-container">
+        <div class="spinner">
+          <div class="spinner-segment white"></div>
+          <div class="spinner-segment black"></div>
+          <div class="spinner-segment blue"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="top-header">
+      <div class="container">
+        <div class="top-header-content">
+          <div class="logo-container">
+            <div class="logo">
+              <a href="index.html" class="logo-link">
+                <img src="./img/l34lGjplOIrJWo9PbhujrGmeuA.avif" alt="TechZone" style="width: 50px;height: 50px;">
+                <span>Zenwood</span>
+              </a>
+            </div>
+            
+            <div class="main-categories-dropdown">
+              <button class="categories-btn" id="categories-btn">
+                <i class="fas fa-bars"></i>
+                <span>Kategoriyalar</span>
+              </button>
+              <div class="main-categories-menu" id="main-categories-menu">
+                <div class="categories-grid">
+                  <div class="categories-column">
+                    <h3 class="categories-title">Elektronika</h3>
+                    <ul class="categories-list">
+                      <li><a href="#">Smartfonlar</a></li>
+                      <li><a href="#">Noutbuklar</a></li>
+                      <li><a href="#">Planshetlar</a></li>
+                      <li><a href="#">Televizorlar</a></li>
+                      <li><a href="#">Kameralar</a></li>
+                    </ul>
+                  </div>
+                  <div class="categories-column">
+                    <h3 class="categories-title">Kompyuter texnikasi</h3>
+                    <ul class="categories-list">
+                      <li><a href="#">Protsessorlar</a></li>
+                      <li><a href="#">Videokartalar</a></li>
+                      <li><a href="#">Monitorlar</a></li>
+                      <li><a href="#">Klaviaturalar</a></li>
+                      <li><a href="#">Sichqonchalar</a></li>
+                    </ul>
+                  </div>
+                  <div class="categories-column">
+                    <h3 class="categories-title">Maishiy texnika</h3>
+                    <ul class="categories-list">
+                      <li><a href="#">Muzlatgichlar</a></li>
+                      <li><a href="#">Kir yuvish mashinalari</a></li>
+                      <li><a href="#">Gaz plitalari</a></li>
+                      <li><a href="#">Konditsionerlar</a></li>
+                      <li><a href="#">Changyutgichlar</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="right-section">
+            <div class="theme-toggle" id="theme-toggle">
+              <i class="fas fa-sun light-icon"></i>
+              <i class="fas fa-moon dark-icon"></i>
+            </div>
+            
+            <div class="language-dropdown">
+              <button class="language-btn">
+                <img src="https://placehold.co/20x20/333/fff?text=UZ" alt="O'zbekcha">
+                <span>O'zbekcha</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="language-dropdown-menu">
+                <a href="#" class="language-option active" data-lang="uz">
+                  <img src="https://placehold.co/20x20/333/fff?text=UZ" alt="O'zbekcha">
+                  <span>O'zbekcha</span>
+                </a>
+                <a href="#" class="language-option" data-lang="ru">
+                  <img src="https://placehold.co/20x20/333/fff?text=RU" alt="Русский">
+                  <span>Русский</span>
+                </a>
+                <a href="#" class="language-option" data-lang="en">
+                  <img src="https://placehold.co/20x20/333/fff?text=EN" alt="English">
+                  <span>English</span>
+                </a>
+              </div>
+            </div>
+            
+            <div class="user-account-dropdown">
+              <button class="account-btn">
+                <i class="fas fa-user"></i>
+                <span>Hisob</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="account-dropdown-menu">
+                <a href="./login.html" class="account-option">
+                  <i class="fas fa-sign-in-alt"></i>
+                  <span>Kirish</span>
+                </a>
+                <a href="./register.html" class="account-option">
+                  <i class="fas fa-user-plus"></i>
+                  <span>Register</span>
+                </a>
+                <a href="#" class="account-option">
+                  <i class="fas fa-question-circle"></i>
+                  <span>Yordam bo'limi</span>
+                </a>
+                <a href="#" class="account-option">
+                  <i class="fas fa-sign-out-alt"></i>
+                  <span>Xisobdan chiqish</span>
+                </a>
+              </div>
+            </div>
+            <button class="search-trigger" id="search-trigger">
+              <i class="fas fa-search"></i>
+            </button>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+              <i class="fas fa-ellipsis-v"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="header-divider"></div>
+    
+    <div class="bottom-header">
+      <div class="container">
+        <div class="bottom-header-content">
+          <nav class="main-nav" id="main-nav">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="#" class="nav-link active" style="white-space: nowrap;">Bosh sahifa</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="./yangilik.html" class="nav-link">Yangiliklar</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Chegirmalar</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link" style="white-space: nowrap;">Ko'p sotilgan</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link" style="white-space: nowrap;">Yangi kelgan</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Aksiyalar</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link" style="white-space: nowrap;">Biz haqimizda</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Aloqa</a>
+              </li>
+              <li class="nav-item">
+                <div class="cart-icon">
+                  <a href="cart.html" class="action-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-slider" id="hero-slider">
+        <div class="slide active">
+          <div class="slide-content">
+            <h2 class="slide-title">Eng so'nggi texnologiyalar</h2>
+            <p class="slide-description">Zamonaviy smartfonlar, noutbuklar va boshqa gadjetlar</p>
+            <a href="#" class="slide-btn">Xarid qilish</a>
+          </div>
+          <div class="slide-image">
+            <img src="./img/iphone-16promax.jpg" alt="Gadgets">
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-content">
+            <h2 class="slide-title">Maxsus takliflar</h2>
+            <p class="slide-description">Chegirmalar va aksiyalar faqat siz uchun</p>
+            <a href="#" class="slide-btn">Xarid qilish</a>
+          </div>
+          <div class="slide-image">
+            <img src="./img/rtx4060.jpg" alt="Offers">
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-content">
+            <h2 class="slide-title">Yangi kolleksiya</h2>
+            <p class="slide-description">Eng so'nggi modellar va yangi kelgan mahsulotlar</p>
+            <a href="#" class="slide-btn">Xarid qilish</a>
+          </div>
+          <div class="slide-image">
+            <img src="./img/redmagic-9c.jpg" alt="New Collection">
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide-content">
+            <h2 class="slide-title">Eng so'ngi</h2>
+            <p class="slide-description">Eng so'nggi modellar va yangi kelgan mahsulotlar</p>
+            <a href="#" class="slide-btn">Xarid qilish</a>
+          </div>
+          <div class="slide-image">
+            <img src="/placeholder.svg" alt="New Collection">
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide-content">
+            <h2 class="slide-title">Yangi xaridlar</h2>
+            <p class="slide-description">Eng so'nggi modellar va yangi kelgan mahsulotlar</p>
+            <a href="#" class="slide-btn">Xarid qilish</a>
+          </div>
+          <div class="slide-image">
+            <img src="." alt="New Collection">
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide-content">
+            <h2 class="slide-title">Yangi tovarlar</h2>
+            <p class="slide-description">Eng so'nggi modellar va yangi kelgan mahsulotlar</p>
+            <a href="#" class="slide-btn">Xarid qilish</a>
+          </div>
+          <div class="slide-image">
+            <img src="/placeholder.svg" alt="New Collection">
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide-content">
+            <h2 class="slide-title">Kalssik kiyimlar</h2>
+            <p class="slide-description">Eng so'nggi modellar va yangi kelgan mahsulotlar</p>
+            <a href="#" class="slide-btn">Xarid qilish</a>
+          </div>
+          <div class="slide-image">
+            <img src="/placeholder.svg" alt="New Collection">
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide-content">
+            <h2 class="slide-title">Harididan minnatdor mijozlar</h2>
+            <p class="slide-description">Eng so'nggi modellar va yangi kelgan mahsulotlar</p>
+            <a href="#" class="slide-btn">Xarid qilish</a>
+          </div>
+          <div class="slide-image">
+            <img src="/placeholder.svg" alt="New Collection">
+          </div>
+        </div>
+      </div>
+      <div class="slider-controls">
+        <button class="slider-arrow prev"><i class="fas fa-chevron-left"></i></button>
+        <div class="slider-dots">
+          <span class="dot active" data-slide="0"></span>
+          <span class="dot" data-slide="1"></span>
+          <span class="dot" data-slide="2"></span>
+        </div>
+        <button class="slider-arrow next"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="categories-section">
+    <div class="container">
+      <h2 class="section-title">Asosiy kategoriyalar</h2>
+      <div class="categories-grid">
+        <a href="#" class="category-card">
+          <div class="category-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h3 class="category-title">Smartfonlar</h3>
+        </a>
+        <a href="#" class="category-card">
+          <div class="category-icon">
+            <i class="fas fa-laptop"></i>
+          </div>
+          <h3 class="category-title">Noutbuklar</h3>
+        </a>
+        <a href="#" class="category-card">
+          <div class="category-icon">
+            <i class="fas fa-tablet-alt"></i>
+          </div>
+          <h3 class="category-title">Planshetlar</h3>
+        </a>
+        <a href="#" class="category-card">
+          <div class="category-icon">
+            <i class="fas fa-tv"></i>
+          </div>
+          <h3 class="category-title">Televizorlar</h3>
+        </a>
+        <a href="#" class="category-card">
+          <div class="category-icon">
+            <i class="fas fa-headphones"></i>
+          </div>
+          <h3 class="category-title">Audio</h3>
+        </a>
+        <a href="#" class="category-card">
+          <div class="category-icon">
+            <i class="fas fa-camera"></i>
+          </div>
+          <h3 class="category-title">Kameralar</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="products-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Mashhur mahsulotlar</h2>
+        <div class="section-filters">
+          <button class="filter-btn active">Hammasi</button>
+          <button class="filter-btn">Yangi</button>
+          <button class="filter-btn">Chegirma</button>
+          <button class="filter-btn">Eng yaxshi</button>
+        </div>
+      </div>
+      <div class="products-grid" id="products-grid">
+        
+<div class="product-card" data-id="1">
+  <div class="product-image">
+    <span class="product-badge badge-new">Yangi</span>
+    <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+    <img src="https://i5.walmartimages.com/seo/Restored-Apple-iPhone-15-Pro-Max-1TB-T-Mobile-Blue-Titanium-MU6J3LL-A-Excellent-Condition_dd2d42c6-cc25-4bee-81ef-7847120498d5.663475b807d168a41e9082d258d9c7ce.jpeg" alt="iPhone 15 Pro Max" loading="lazy">
+  </div>
+  <div class="product-details">
+    <h3 class="product-title">iPhone 15 Pro Max</h3>
+    <div class="product-rating">
+      <div class="rating-stars">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+      </div>
+      <span class="rating-count">(128)</span>
+    </div>
+    <div class="product-price">
+              <span class="current-price">14 999 000 so'm</span>
+              <span class="original-price">15 999 000 so'm</span>
+            </div>
+    <div class="product-actions">
+      <button class="add-to-cart">Savatga qo'shish</button>
+    </div>
+  </div>
+</div>
+
+        <div class="product-card" data-id="2">
+          <div class="product-image">
+            <span class="product-badge badge-sale">Chegirma</span>
+            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+            <img src="https://minapi.beemarket.uz/prod-media/productImages/1718191733JPLzcT8diH9Q.webp" alt="Samsung Galaxy S23 Ultra">
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">Samsung Galaxy S23 Ultra</h3>
+            <div class="product-rating">
+              <div class="rating-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="rating-count">(96)</span>
+            </div>
+            <div class="product-price">
+              <span class="current-price">12 999 000 so'm</span>
+              <span class="original-price">13 999 000 so'm</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart">Savatga qo'shish</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-id="3">
+          <div class="product-image">
+            <span class="product-badge badge-new">Yangi</span>
+            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+            <img src="https://maxcom.uz/storage/product/PDJxygtlCIsVvEshsdI6AUGj9GiwHoFvm5uN6D8b.jpeg" alt="MacBook Pro 16\" M3 Max">
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">MacBook Pro 16" M3 Max</h3>
+            <div class="product-rating">
+              <div class="rating-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="rating-count">(64)</span>
+            </div>
+            <div class="product-price">
+              <span class="current-price">29 999 000 so'm</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart">Savatga qo'shish</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-id="4">
+          <div class="product-image">
+            <span class="product-badge badge-sale">Chegirma</span>
+            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+            <img src="https://nout.uz/wp-content/uploads/2024/12/330.png" alt="Dell XPS 15">
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">Dell XPS 15</h3>
+            <div class="product-rating">
+              <div class="rating-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="rating-count">(82)</span>
+            </div>
+            <div class="product-price">
+              <span class="current-price">19 999 000 so'm</span>
+              <span class="original-price">21 999 000 so'm</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart">Savatga qo'shish</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-id="5">
+          <div class="product-image">
+            <span class="product-badge badge-new">Yangi</span>
+            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+            <img src="https://brostore.uz/cdn/shop/files/u2.png?v=1700307807" alt="iPad Pro 12.9\" M2">
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">iPad Pro 12.9" M2</h3>
+            <div class="product-rating">
+              <div class="rating-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="rating-count">(75)</span>
+            </div>
+            <div class="product-price">
+              <span class="current-price">15 999 000 so'm</span>
+              <span class="original-price">16 999 000 so'm</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart">Savatga qo'shish</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-id="6">
+          <div class="product-image">
+            <span class="product-badge badge-sale">Chegirma</span>
+            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+            <img src="https://cdn.mediablog.mediapark.uz/corecms/post-thumbnails/01J7FQP0J84CW6SGBAM2K1EH73.webp" alt="Sony PlayStation 5">
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">Sony PlayStation 5</h3>
+            <div class="product-rating">
+              <div class="rating-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="rating-count">(215)</span>
+            </div>
+            <div class="product-price">
+              <span class="current-price">7 999 000 so'm</span>
+              <span class="original-price">8 499 000 so'm</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart">Savatga qo'shish</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-id="7">
+          <div class="product-image">
+            <span class="product-badge badge-sale">Chegirma</span>
+            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+            <img src="https://static.galaxystore.ru/upload/iblock/43a/ahslmlif0upfil5za6stan5nvyr1e35k.jpg" alt="Samsung QLED 4K TV 65\"">
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">Samsung QLED 4K TV 65"</h3>
+            <div class="product-rating">
+              <div class="rating-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="rating-count">(94)</span>
+            </div>
+            <div class="product-price">
+              <span class="current-price">11 999 000 so'm</span>
+              <span class="original-price">12 999 000 so'm</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart">Savatga qo'shish</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-id="8">
+          <div class="product-image">
+            <span class="product-badge badge-new">Yangi</span>
+            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+            <img src="https://helpix.ru/zte/nubia_red_magic_8_pro/pic/01_p00.jpg" alt="Canon EOS R5">
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">Canon EOS R5</h3>
+            <div class="product-rating">
+              <div class="rating-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="rating-count">(67)</span>
+            </div>
+            <div class="product-price">
+              <span class="current-price">18 999 000 so'm</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart">Savatga qo'shish</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="load-more">
+        <button class="load-more-btn">Ko'proq ko'rsatish</button>
+      </div>
+    </div>
+  </section>
+
+  
+<section class="banner-section">
+  <div class="container">
+    <div class="banner">
+      <div class="banner-content">
+        <h2 class="banner-title">Yangi iPhone 15 Pro</h2>
+        <p class="banner-description">Eng kuchli protsessor, professional kamera va yangi dizayn</p>
+        <a href="./cart.html" class="banner-btn">Hozir xarid qilish</a>
+      </div>
+      <div class="banner-image">
+        <img src="./img/Iphone-15.webp" alt="iPhone 15 Pro">
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="products-section">
+    <div class="container">
+      <h2 class="section-title">Yangi kelgan mahsulotlar</h2>
+      <div class="products-grid" id="new-products-grid">
+        <div class="product-card" data-id="1">
+          <div class="product-image">
+            <span class="product-badge badge-new">Yangi</span>
+            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+            <img src="https://i5.walmartimages.com/seo/Restored-Apple-iPhone-15-Pro-Max-1TB-T-Mobile-Blue-Titanium-MU6J3LL-A-Excellent-Condition_dd2d42c6-cc25-4bee-81ef-7847120498d5.663475b807d168a41e9082d258d9c7ce.jpeg" alt="iPhone 15 Pro Max">
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">iPhone 15 Pro Max</h3>
+            <div class="product-rating">
+              <div class="rating-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="rating-count">(128)</span>
+            </div>
+            <div class="product-price">
+              <span class="current-price">14 999 000 so'm</span>
+              <span class="original-price">15 999 000 so'm</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart">Savatga qo'shish</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-id="3">
+          <div class="product-image">
+            <span class="product-badge badge-new">Yangi</span>
+            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+            <img src="https://maxcom.uz/storage/product/PDJxygtlCIsVvEshsdI6AUGj9GiwHoFvm5uN6D8b.jpeg" alt="MacBook Pro 16\" M3 Max">
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">MacBook Pro 16" M3 Max</h3>
+            <div class="product-rating">
+              <div class="rating-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="rating-count">(64)</span>
+            </div>
+            <div class="product-price">
+              <span class="current-price">29 999 000 so'm</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart">Savatga qo'shish</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-id="5">
+          <div class="product-image">
+            <span class="product-badge badge-new">Yangi</span>
+            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+            <img src="https://brostore.uz/cdn/shop/files/u2.png?v=1700307807" alt="iPad Pro 12.9\" M2">
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">iPad Pro 12.9" M2</h3>
+            <div class="product-rating">
+              <div class="rating-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="rating-count">(75)</span>
+            </div>
+            <div class="product-price">
+              <span class="current-price">15 999 000 so'm</span>
+              <span class="original-price">16 999 000 so'm</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart">Savatga qo'shish</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-id="8">
+          <div class="product-image">
+            <span class="product-badge badge-new">Yangi</span>
+            <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+            <img src="https://helpix.ru/zte/nubia_red_magic_8_pro/pic/01_p00.jpg" alt="Canon EOS R5">
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">Canon EOS R5</h3>
+            <div class="product-rating">
+              <div class="rating-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="rating-count">(67)</span>
+            </div>
+            <div class="product-price">
+              <span class="current-price">18 999 000 so'm</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart">Savatga qo'shish</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features-section">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-truck"></i>
+          </div>
+          <h3 class="feature-title">Tezkor yetkazib berish</h3>
+          <p class="feature-description">Butun O'zbekiston bo'ylab tezkor yetkazib berish xizmati</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3 class="feature-title">Xavfsiz to'lov</h3>
+          <p class="feature-description">100% xavfsiz to'lov tizimlari orqali to'lovlarni amalga oshiring</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-headset"></i>
+          </div>
+          <h3 class="feature-title">24/7 qo'llab-quvvatlash</h3>
+          <p class="feature-description">Bizning mutaxassislar har qanday savolingizga javob berishga tayyor</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-undo"></i>
+          </div>
+          <h3 class="feature-title">Oson qaytarish</h3>
+          <p class="feature-description">14 kun ichida mahsulotni qaytarish imkoniyati</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+<section class="contact-form-section">
+  <div class="container">
+    <div class="contact-form-container">
+      <h2 class="contact-form-title">Biz bilan bog'lanish</h2>
+      <form class="contact-form" id="contact-form">
+        <div class="form-group">
+          <label for="contact-name">Ism</label>
+          <input type="text" id="contact-name" name="name" required placeholder="Ismingizni kiriting">
+        </div>
+        <div class="form-group">
+          <label for="contact-surname">Familiya</label>
+          <input type="text" id="contact-surname" name="surname" required placeholder="Familiyangizni kiriting">
+        </div>
+        <div class="form-group">
+          <label for="contact-email">Email</label>
+          <input type="email" id="contact-email" name="email" required placeholder="Email manzilingizni kiriting">
+        </div>
+        <div class="form-group">
+          <label for="contact-phone">Telefon raqami</label>
+          <input type="tel" id="contact-phone" name="phone" required placeholder="+998 xx xx xx xx">
+        </div>
+        <div class="form-group">
+          <label for="contact-message">Xabar</label>
+          <textarea id="contact-message" rows="6" cols="50" name="message" required placeholder="Xabaringizni yoki savolingiz bo'lsa bemalol bu yerga yozishingiz mumkin!"></textarea>
+        </div>
+        <button type="submit" class="contact-form-submit">Xabarni yuborish</button>
+      </form>
+      <div class="contact-success-message" id="contact-success">
+        Xabaringiz muvaffaqiyatli yuborildi! Tez orada siz bilan bog'lanamiz.
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-column">
+        <div class="footer-logo">
+          <img src="./img/l34lGjplOIrJWo9PbhujrGmeuA.avif" alt="TechZone">
+          <h2>Zenwood</h2>
+        </div>
+        <p class="footer-description">Zamonaviy texnologiyalar va gadjetlar do'koni. Biz sifatli mahsulotlar va ajoyib xizmat bilan mijozlarimizga xizmat ko'rsatishdan faxrlanamiz.</p>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h3 class="footer-heading">Ma'lumot</h3>
+        <ul class="footer-links">
+          <li><a href="#">Biz haqimizda</a></li>
+          <br>
+          <li><a href="#">Yetkazib berish</a></li>
+          <br>
+          <li><a href="#">To'lov usullari</a></li>
+          <br>
+          <li><a href="#">Kafolat shartlari</a></li>
+          <br>
+          <li><a href="#">Maxfiylik siyosati</a></li>
+          <br>
+          <li><a href="#">Foydalanish shartlari</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3 class="footer-heading">Biz bilan bog'lanish</h3>
+        <ul class="contact-info">
+          <li><i class="fas fa-map-marker-alt"></i> <span>Uzbekistan. Tashkent</span></li>
+          <br>
+          <li><i class="fas fa-phone"></i> <span>+998 99 999 99 99</span></li>
+          <br>
+          <li><i class="fas fa-envelope"></i> <span>info@soluna-store.uz</span></li>
+          <br>
+          <li><i class="fas fa-clock"></i> <span>Ish vaqti: 9:00 - 20:00</span></li>
+        </ul>
+        <div class="app-downloads">
+          <h4>Mobil ilovamizni yuklab oling</h4>
+          <br>
+          <div class="app-buttons">
+            <a href="#" class="app-button">
+              <img src="https://placehold.co/120x40/333/fff?text=App+Store" alt="App Store">
+            </a>
+            <br>
+            <a href="#" class="app-button">
+              <img src="https://placehold.co/120x40/333/fff?text=Google+Play" alt="Google Play">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="copyright">&copy; 2025 Zenwood. Barcha huquqlar himoyalangan.</p>
+      <div class="footer-nav">
+        <a href="#">Maxfiylik siyosati</a>
+        <a href="#">Foydalanish shartlari</a>
+        <a href="#">Sayt xaritasi</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+
+
+
+  <script src="./js/script.js"></script>
+  <script src="./js/product-details.js"></script>
+
+<!-- Product Detail Modal -->
+<div class="product-detail-modal" id="product-detail-modal">
+  <div class="product-detail-container">
+    <button class="product-detail-close" id="product-detail-close"><i class="fas fa-times"></i></button>
+    <div id="breadcrumb-container"></div>
+    <div id="product-detail-content"></div>
+  </div>
+</div>
+  
+</body>
+</html>
