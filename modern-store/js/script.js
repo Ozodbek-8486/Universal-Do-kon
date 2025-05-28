@@ -51,302 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Declare languageBtn, languageOptions, and translations
   const languageBtn = document.getElementById("language-btn")
   const languageOptions = document.querySelectorAll(".language-option")
-  const translations = {
-    uz: {
-      home: "Bosh sahifa",
-      categories: "Kategoriyalar",
-      news: "Yangiliklar",
-      discounts: "Chegirmalar",
-      bestsellers: "Ko'p sotilgan",
-      new_arrivals: "Yangi kelgan",
-      promotions: "Aksiyalar",
-      about_us: "Biz haqimizda",
-      contact: "Aloqa",
-      login: "Kirish",
-      register: "Ro'yxatdan o'tish",
-      electronics: "Elektronika",
-      computer_hardware: "Kompyuter texnikasi",
-      home_appliances: "Maishiy texnika",
-      smartphones: "Smartfonlar",
-      laptops: "Noutbuklar",
-      tablets: "Planshetlar",
-      tvs: "Televizorlar",
-      cameras: "Kameralar",
-      processors: "Protsessorlar",
-      video_cards: "Videokartalar",
-      monitors: "Monitorlar",
-      keyboards: "Klaviaturalar",
-      mice: "Sichqonchalar",
-      refrigerators: "Muzlatgichlar",
-      washing_machines: "Kir yuvish mashinalari",
-      stoves: "Gaz plitalari",
-      air_conditioners: "Konditsionerlar",
-      vacuum_cleaners: "Changyutgichlar",
-      latest_tech: "So'nggi texnologiyalar",
-      modern_gadgets: "Zamonaviy gadjetlar",
-      shop_now: "Xarid qilish",
-      special_offers: "Maxsus takliflar",
-      discounts_promotions: "Chegirmalar va aksiyalar",
-      new_collection: "Yangi kolleksiya",
-      latest_models: "So'nggi modellar",
-      main_categories: "Asosiy kategoriyalar",
-      popular_products: "Ommabop mahsulotlar",
-      all: "Hammasi",
-      new: "Yangi",
-      discount: "Chegirma",
-      best: "Eng yaxshi",
-      add_to_cart: "Savatga qo'shish",
-      show_more: "Ko'proq ko'rish",
-      new_iphone: "Yangi iPhone",
-      powerful_processor: "Kuchli protsessor",
-      buy_now: "Hozir sotib olish",
-      fast_delivery: "Tez yetkazib berish",
-      fast_delivery_desc: "24 soat ichida yetkazib berish",
-      secure_payment: "Xavfsiz to'lov",
-      secure_payment_desc: "100% xavfsiz to'lov",
-      support: "Qo'llab-quvvatlash",
-      support_desc: "24/7 qo'llab-quvvatlash",
-      easy_return: "Oson qaytarish",
-      easy_return_desc: "14 kun ichida qaytarish",
-      stay_updated: "Yangiliklardan xabardor bo'ling",
-      newsletter_desc: "Bizning yangiliklarimizga obuna bo'ling",
-      email_placeholder: "Email manzilingiz",
-      subscribe: "Obuna bo'lish",
-      store_desc: "Bizning do'konimiz sizga eng yaxshi mahsulotlarni taklif etadi",
-      information: "Ma'lumot",
-      customer_service: "Mijozlarga xizmat",
-      contact_us: "Biz bilan bog'lanish",
-      audio: "Audio",
-      accessories: "Aksessuarlar",
-      delivery: "Yetkazib berish",
-      payment_methods: "To'lov usullari",
-      warranty: "Kafolat shartlari",
-      privacy_policy: "Maxfiylik siyosati",
-      terms: "Foydalanish shartlari",
-      faq: "Ko'p so'raladigan savollar",
-      my_account: "Mening hisobim",
-      order_history: "Buyurtmalar tarixi",
-      wishlist: "Istaklar ro'yxati",
-      returns: "Qaytarish",
-      complaints: "Shikoyatlar",
-      working_hours: "Dushanba - Juma: 9:00 - 18:00",
-      download_app: "Ilovani yuklab oling",
-      partners: "Hamkorlar",
-      copyright: "Mualliflik huquqi © 2024",
-      cart_added: "Mahsulot savatga qo'shildi!",
-      name: "Ism",
-      surname: "Familiya",
-      email: "Email",
-      message: "Xabar",
-      send_message: "Xabarni yuborish",
-      message_sent: "Xabaringiz muvaffaqiyatli yuborildi!",
-      product_description:
-        "Bu mahsulot haqida batafsil ma'lumot. Mahsulotning asosiy xususiyatlari, afzalliklari va qo'shimcha ma'lumotlar.",
-      ratings: "ta baho",
-      color: "Rang",
-      black: "Qora",
-      silver: "Kumush",
-      gold: "Oltin",
-      storage: "Xotira",
-      quantity: "Miqdori",
-    },
-    ru: {
-      home: "Главная",
-      categories: "Категории",
-      news: "Новости",
-      discounts: "Скидки",
-      bestsellers: "Бестселлеры",
-      new_arrivals: "Новинки",
-      promotions: "Акции",
-      about_us: "О нас",
-      contact: "Контакты",
-      login: "Вход",
-      register: "Регистрация",
-      electronics: "Электроника",
-      computer_hardware: "Компьютерная техника",
-      home_appliances: "Бытовая техника",
-      smartphones: "Смартфоны",
-      laptops: "Ноутбуки",
-      tablets: "Планшеты",
-      tvs: "Телевизоры",
-      cameras: "Камеры",
-      processors: "Процессоры",
-      video_cards: "Видеокарты",
-      monitors: "Мониторы",
-      keyboards: "Клавиатуры",
-      mice: "Мыши",
-      refrigerators: "Холодильники",
-      washing_machines: "Стиральные машины",
-      stoves: "Плиты",
-      air_conditioners: "Кондиционеры",
-      vacuum_cleaners: "Пылесосы",
-      latest_tech: "Последние технологии",
-      modern_gadgets: "Современные гаджеты",
-      shop_now: "Купить сейчас",
-      special_offers: "Специальные предложения",
-      discounts_promotions: "Скидки и акции",
-      new_collection: "Новая коллекция",
-      latest_models: "Последние модели",
-      main_categories: "Основные категории",
-      popular_products: "Популярные продукты",
-      all: "Все",
-      new: "Новые",
-      discount: "Скидки",
-      best: "Лучшие",
-      add_to_cart: "Добавить в корзину",
-      show_more: "Показать больше",
-      new_iphone: "Новый iPhone",
-      powerful_processor: "Мощный процессор",
-      buy_now: "Купить сейчас",
-      fast_delivery: "Быстрая доставка",
-      fast_delivery_desc: "Доставка в течение 24 часов",
-      secure_payment: "Безопасный платеж",
-      secure_payment_desc: "100% безопасный платеж",
-      support: "Поддержка",
-      support_desc: "Поддержка 24/7",
-      easy_return: "Легкий возврат",
-      easy_return_desc: "Возврат в течение 14 дней",
-      stay_updated: "Будьте в курсе новостей",
-      newsletter_desc: "Подпишитесь на нашу рассылку",
-      email_placeholder: "Ваш email",
-      subscribe: "Подписаться",
-      store_desc: "Наш магазин предлагает вам лучшие продукты",
-      information: "Информация",
-      customer_service: "Обслуживание клиентов",
-      contact_us: "Связаться с нами",
-      audio: "Аудио",
-      accessories: "Аксессуары",
-      delivery: "Доставка",
-      payment_methods: "Способы оплаты",
-      warranty: "Условия гарантии",
-      privacy_policy: "Политика конфиденциальности",
-      terms: "Условия использования",
-      faq: "Часто задаваемые вопросы",
-      my_account: "Мой аккаунт",
-      order_history: "История заказов",
-      wishlist: "Список желаний",
-      returns: "Возвраты",
-      complaints: "Жалобы",
-      working_hours: "Понедельник - Пятница: 9:00 - 18:00",
-      download_app: "Скачать приложение",
-      partners: "Партнеры",
-      copyright: "Авторское право © 2024",
-      cart_added: "Товар добавлен в корзину!",
-      name: "Имя",
-      surname: "Фамилия",
-      email: "Email",
-      message: "Сообщение",
-      send_message: "Отправить сообщение",
-      message_sent: "Ваше сообщение успешно отправлено!",
-      product_description:
-        "Подробная информация об этом продукте. Основные характеристики, преимущества и дополнительная информация о продукте.",
-      ratings: "оценок",
-      color: "Цвет",
-      black: "Черный",
-      silver: "Серебряный",
-      gold: "Золотой",
-      storage: "Память",
-      quantity: "Количество",
-    },
-    en: {
-      home: "Home",
-      categories: "Categories",
-      news: "News",
-      discounts: "Discounts",
-      bestsellers: "Bestsellers",
-      new_arrivals: "New Arrivals",
-      promotions: "Promotions",
-      about_us: "About Us",
-      contact: "Contact",
-      login: "Login",
-      register: "Register",
-      electronics: "Electronics",
-      computer_hardware: "Computer Hardware",
-      home_appliances: "Home Appliances",
-      smartphones: "Smartphones",
-      laptops: "Laptops",
-      tablets: "Tablets",
-      tvs: "TVs",
-      cameras: "Cameras",
-      processors: "Processors",
-      video_cards: "Video Cards",
-      monitors: "Monitors",
-      keyboards: "Keyboards",
-      mice: "Mice",
-      refrigerators: "Refrigerators",
-      washing_machines: "Washing Machines",
-      stoves: "Stoves",
-      air_conditioners: "Air Conditioners",
-      vacuum_cleaners: "Vacuum Cleaners",
-      latest_tech: "Latest Tech",
-      modern_gadgets: "Modern Gadgets",
-      shop_now: "Shop Now",
-      special_offers: "Special Offers",
-      discounts_promotions: "Discounts & Promotions",
-      new_collection: "New Collection",
-      latest_models: "Latest Models",
-      main_categories: "Main Categories",
-      popular_products: "Popular Products",
-      all: "All",
-      new: "New",
-      discount: "Discount",
-      best: "Best",
-      add_to_cart: "Add to Cart",
-      show_more: "Show More",
-      new_iphone: "New iPhone",
-      powerful_processor: "Powerful Processor",
-      buy_now: "Buy Now",
-      fast_delivery: "Fast Delivery",
-      fast_delivery_desc: "Delivery within 24 hours",
-      secure_payment: "Secure Payment",
-      secure_payment_desc: "100% secure payment",
-      support: "Support",
-      support_desc: "24/7 support",
-      easy_return: "Easy Return",
-      easy_return_desc: "Return within 14 days",
-      stay_updated: "Stay Updated",
-      newsletter_desc: "Subscribe to our newsletter",
-      email_placeholder: "Your email",
-      subscribe: "Subscribe",
-      store_desc: "Our store offers you the best products",
-      information: "Information",
-      customer_service: "Customer Service",
-      contact_us: "Contact Us",
-      audio: "Audio",
-      accessories: "Accessories",
-      delivery: "Delivery",
-      payment_methods: "Payment Methods",
-      warranty: "Warranty Terms",
-      privacy_policy: "Privacy Policy",
-      terms: "Terms of Use",
-      faq: "FAQ",
-      my_account: "My Account",
-      order_history: "Order History",
-      wishlist: "Wishlist",
-      returns: "Returns",
-      complaints: "Complaints",
-      working_hours: "Monday - Friday: 9:00 - 18:00",
-      download_app: "Download App",
-      partners: "Partners",
-      copyright: "Copyright © 2024",
-      cart_added: "Product added to cart!",
-      name: "Name",
-      surname: "Surname",
-      email: "Email",
-      message: "Message",
-      send_message: "Send Message",
-      message_sent: "Your message has been sent successfully!",
-      product_description:
-        "Detailed information about this product. Key features, benefits, and additional product information.",
-      ratings: "ratings",
-      color: "Color",
-      black: "Black",
-      silver: "Silver",
-      gold: "Gold",
-      storage: "Storage",
-      quantity: "Quantity",
-    },
-  }
 
   function init() {
     setTimeout(() => {
@@ -383,6 +87,25 @@ document.addEventListener("DOMContentLoaded", () => {
     if (currentPath.includes("cart.html")) {
       renderCart()
     }
+
+    // Initialize cart preview on homepage
+    const cartContentPreview = document.getElementById("cart-content-preview")
+    const emptyCartPreview = document.getElementById("empty-cart-preview")
+    const cartItemsListPreview = document.getElementById("cart-items-list-preview")
+    const cartTotalCountPreview = document.getElementById("cart-total-count-preview")
+    const cartSubtotalPreview = document.getElementById("cart-subtotal-preview")
+    const cartDiscountPreview = document.getElementById("cart-discount-preview")
+    const cartTotalPreview = document.getElementById("cart-total-preview")
+    const clearCartBtnPreview = document.getElementById("clear-cart-preview")
+    const checkoutBtnPreview = document.getElementById("checkout-btn-preview")
+
+    // Add event listeners for cart preview
+    if (clearCartBtnPreview) {
+      clearCartBtnPreview.addEventListener("click", clearCart)
+    }
+
+    // Update the cart preview on homepage
+    updateCartPreview()
   }
 
   // Initialize event listeners
@@ -1456,304 +1179,55 @@ document.addEventListener("DOMContentLoaded", () => {
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel ultricies lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl. Sed euismod, nisl vel ultricies lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl.</p>
           </div>
           <div class="tab-panel" id="specifications">
-            <h3>Texnik xususiyatlar</h3>
-            <table class="specs-table">
-              <tr>
-                <th>Model</th>
-                <td>${productTitle}</td>
-              </tr>
-              <tr>
-                <th>Rang</th>
-                <td>Qora</td>
-              </tr>
-              <tr>
-                <th>Xotira</th>
-                <td>128GB</td>
-              </tr>
-              <tr>
-                <th>Protsessor</th>
-                <td>A15 Bionic</td>
-              </tr>
-              <tr>
-                <th>Ekran</th>
-                <td>6.1 dyuym Super Retina XDR</td>
-              </tr>
-              <tr>
-                <th>Kamera</th>
-                <td>12MP + 12MP</td>
-              </tr>
-              <tr>
-                <th>Batareya</th>
-                <td>3240 mAh</td>
-              </tr>
-              <tr>
-                <th>O'lchamlari</th>
-                <td>146.7 x 71.5 x 7.65 mm</td>
-              </tr>
-              <tr>
-                <th>Og'irligi</th>
-                <td>174 g</td>
-              </tr>
-            </table>
+            <h3>Xususiyatlar</h3>
+            <ul>
+              <li>Brend: Apple</li>
+              <li>Model: iPhone 13 Pro</li>
+              <li>Xotira: 256GB</li>
+              <li>Rang: Qora</li>
+              <li>Kamera: 12MP</li>
+            </ul>
           </div>
           <div class="tab-panel" id="reviews">
-            <h3>Mijozlar sharhlari</h3>
-            <div class="reviews-summary">
-              <div class="reviews-average">
-                <div class="average-rating">4.9</div>
-                <div class="average-stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                </div>
-                <div class="total-reviews">24 sharh asosida</div>
+            <h3>Sharhlar (24)</h3>
+            <div class="review">
+              <h4>Ali</h4>
+              <div class="rating-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
               </div>
-              <div class="reviews-breakdown">
-                <div class="rating-bar">
-                  <span class="rating-label">5 yulduz</span>
-                  <div class="rating-progress">
-                    <div class="rating-progress-fill" style="width: 80%"></div>
-                  </div>
-                  <span class="rating-count">20</span>
-                </div>
-                <div class="rating-bar">
-                  <span class="rating-label">4 yulduz</span>
-                  <div class="rating-progress">
-                    <div class="rating-progress-fill" style="width: 15%"></div>
-                  </div>
-                  <span class="rating-count">3</span>
-                </div>
-                <div class="rating-bar">
-                  <span class="rating-label">3 yulduz</span>
-                  <div class="rating-progress">
-                    <div class="rating-progress-fill" style="width: 5%"></div>
-                  </div>
-                  <span class="rating-count">1</span>
-                </div>
-                <div class="rating-bar">
-                  <span class="rating-label">2 yulduz</span>
-                  <div class="rating-progress">
-                    <div class="rating-progress-fill" style="width: 0%"></div>
-                  </div>
-                  <span class="rating-count">0</span>
-                </div>
-                <div class="rating-bar">
-                  <span class="rating-label">1 yulduz</span>
-                  <div class="rating-progress">
-                    <div class="rating-progress-fill" style="width: 0%"></div>
-                  </div>
-                  <span class="rating-count">0</span>
-                </div>
-              </div>
+              <p>Zo'r mahsulot, tavsiya qilaman!</p>
             </div>
-            <div class="reviews-list">
-              <div class="review-item">
-                <div class="review-header">
-                  <div class="reviewer-info">
-                    <div class="reviewer-avatar">
-                      <img src="https://placehold.co/40x40/333/fff?text=A" alt="Avatar">
-                    </div>
-                    <div class="reviewer-details">
-                      <div class="reviewer-name">Anvar Qodirov</div>
-                      <div class="review-date">12.05.2025</div>
-                    </div>
-                  </div>
-                  <div class="review-rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                </div>
-                <div class="review-content">
-                  <p>Juda ajoyib mahsulot! Sifati yuqori, ishlashi tez. Tavsiya qilaman.</p>
-                </div>
+            <div class="review">
+              <h4>Vali</h4>
+              <div class="rating-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
               </div>
-              <div class="review-item">
-                <div class="review-header">
-                  <div class="reviewer-info">
-                    <div class="reviewer-avatar">
-                      <img src="https://placehold.co/40x40/333/fff?text=M" alt="Avatar">
-                    </div>
-                    <div class="reviewer-details">
-                      <div class="reviewer-name">Malika Azizova</div>
-                      <div class="review-date">10.05.2025</div>
-                    </div>
-                  </div>
-                  <div class="review-rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                </div>
-                <div class="review-content">
-                  <p>Mahsulot juda yaxshi. Yetkazib berish ham tez. Rahmat!</p>
-                </div>
-              </div>
-              <div class="review-item">
-                <div class="review-header">
-                  <div class="reviewer-info">
-                    <div class="reviewer-avatar">
-                      <img src="https://placehold.co/40x40/333/fff?text=S" alt="Avatar">
-                    </div>
-                    <div class="reviewer-details">
-                      <div class="reviewer-name">Sardor Aliyev</div>
-                      <div class="review-date">05.05.2025</div>
-                    </div>
-                  </div>
-                  <div class="review-rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                  </div>
-                </div>
-                <div class="review-content">
-                  <p>Yaxshi mahsulot, lekin batareyasi tezroq tugaydi deb o'ylagandim. Umuman olganda yaxshi.</p>
-                </div>
-              </div>
-            </div>
-            <div class="load-more-reviews">
-              <button class="load-more-reviews-btn">Ko'proq sharhlarni ko'rish</button>
-            </div>
-            <div class="write-review">
-              <h4>Sharh qoldirish</h4>
-              <form class="review-form">
-                <div class="review-form-rating">
-                  <span>Baholash:</span>
-                  <div class="rating-select">
-                    <i class="far fa-star" data-rating="1"></i>
-                    <i class="far fa-star" data-rating="2"></i>
-                    <i class="far fa-star" data-rating="3"></i>
-                    <i class="far fa-star" data-rating="4"></i>
-                    <i class="far fa-star" data-rating="5"></i>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="review-text">Sharh</label>
-                  <textarea id="review-text" rows="4" placeholder="Mahsulot haqida fikringizni yozing..."></textarea>
-                </div>
-                <button type="submit" class="submit-review-btn">Sharh qoldirish</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="related-products">
-        <h3>O'xshash mahsulotlar</h3>
-        <div class="related-products-grid">
-          <div class="product-card" data-id="2">
-            <div class="product-image">
-              <span class="product-badge badge-sale">Chegirma</span>
-              <button class="wishlist-btn"><i class="far fa-heart"></i></button>
-              <img src="https://minapi.beemarket.uz/prod-media/productImages/1718191733JPLzcT8diH9Q.webp" alt="Samsung Galaxy S23 Ultra">
-            </div>
-            <div class="product-details">
-              <h3 class="product-title">Samsung Galaxy S23 Ultra</h3>
-              <div class="product-rating">
-                <div class="rating-stars">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                </div>
-                <span class="rating-count">(96)</span>
-              </div>
-              <div class="product-price">
-                <span class="current-price">12 999 000 so'm</span>
-                <span class="original-price">13 999 000 so'm</span>
-              </div>
-              <div class="product-actions">
-                <button class="add-to-cart">Savatga qo'shish</button>
-              </div>
-            </div>
-          </div>
-          <div class="product-card" data-id="3">
-            <div class="product-image">
-              <span class="product-badge badge-new">Yangi</span>
-              <button class="wishlist-btn"><i class="far fa-heart"></i></button>
-              <img src="https://maxcom.uz/storage/product/PDJxygtlCIsVvEshsdI6AUGj9GiwHoFvm5uN6D8b.jpeg" alt="MacBook Pro 16\" M3 Max">
-            </div>
-            <div class="product-details">
-              <h3 class="product-title">MacBook Pro 16" M3 Max</h3>
-              <div class="product-rating">
-                <div class="rating-stars">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                </div>
-                <span class="rating-count">(64)</span>
-              </div>
-              <div class="product-price">
-                <span class="current-price">29 999 000 so'm</span>
-              </div>
-              <div class="product-actions">
-                <button class="add-to-cart">Savatga qo'shish</button>
-              </div>
-            </div>
-          </div>
-          <div class="product-card" data-id="5">
-            <div class="product-image">
-              <span class="product-badge badge-new">Yangi</span>
-              <button class="wishlist-btn"><i class="far fa-heart"></i></button>
-              <img src="https://brostore.uz/cdn/shop/files/u2.png?v=1700307807" alt="iPad Pro 12.9\" M2">
-            </div>
-            <div class="product-details">
-              <h3 class="product-title">iPad Pro 12.9" M2</h3>
-              <div class="product-rating">
-                <div class="rating-stars">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                </div>
-                <span class="rating-count">(75)</span>
-              </div>
-              <div class="product-price">
-                <span class="current-price">15 999 000 so'm</span>
-                <span class="original-price">16 999 000 so'm</span>
-              </div>
-              <div class="product-actions">
-                <button class="add-to-cart">Savatga qo'shish</button>
-              </div>
-            </div>
-          </div>
-          <div class="product-card" data-id="8">
-            <div class="product-image">
-              <span class="product-badge badge-new">Yangi</span>
-              <button class="wishlist-btn"><i class="far fa-heart"></i></button>
-              <img src="https://helpix.ru/zte/nubia_red_magic_8_pro/pic/01_p00.jpg" alt="Canon EOS R5">
-            </div>
-            <div class="product-details">
-              <h3 class="product-title">Canon EOS R5</h3>
-              <div class="product-rating">
-                <div class="rating-stars">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                </div>
-                <span class="rating-count">(67)</span>
-              </div>
-              <div class="product-price">
-                <span class="current-price">18 999 000 so'm</span>
-              </div>
-              <div class="product-actions">
-                <button class="add-to-cart">Savatga qo'shish</button>
-              </div>
+              <p>Narxi biroz qimmat, lekin sifati yaxshi.</p>
             </div>
           </div>
         </div>
       </div>
     `
 
-    // Add event listeners for product detail
+    // Add event listeners for product detail modal
     const quantityInput = productDetailContent.querySelector(".quantity-input")
     const minusBtn = productDetailContent.querySelector(".quantity-btn.minus")
     const plusBtn = productDetailContent.querySelector(".quantity-btn.plus")
     const addToCartBtn = productDetailContent.querySelector(".detail-add-to-cart")
     const buyNowBtn = productDetailContent.querySelector(".detail-buy-now")
+    const wishlistBtn = productDetailContent.querySelector(".detail-wishlist")
     const attributeOptions = productDetailContent.querySelectorAll(".attribute-option")
+    const thumbnails = productDetailContent.querySelectorAll(".product-detail-thumbnail")
     const tabBtns = productDetailContent.querySelectorAll(".tab-btn")
     const tabPanels = productDetailContent.querySelectorAll(".tab-panel")
-    const thumbnails = productDetailContent.querySelectorAll(".product-detail-thumbnail")
-    const ratingStars = productDetailContent.querySelectorAll(".rating-select i")
-    const loadMoreReviewsBtn = productDetailContent.querySelector(".load-more-reviews-btn")
 
     minusBtn.addEventListener("click", () => {
       if (quantityInput.value > 1) {
@@ -1777,6 +1251,10 @@ document.addEventListener("DOMContentLoaded", () => {
       window.location.href = "cart.html"
     })
 
+    wishlistBtn.addEventListener("click", () => {
+      alert("Mahsulot istaklar ro'yxatiga qo'shildi!")
+    })
+
     attributeOptions.forEach((option) => {
       option.addEventListener("click", () => {
         const parent = option.parentElement
@@ -1787,67 +1265,31 @@ document.addEventListener("DOMContentLoaded", () => {
       })
     })
 
-    tabBtns.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const tabId = btn.dataset.tab
-
-        tabBtns.forEach((b) => b.classList.remove("active"))
-        tabPanels.forEach((p) => p.classList.remove("active"))
-
-        btn.classList.add("active")
-        document.getElementById(tabId).classList.add("active")
-      })
-    })
-
     thumbnails.forEach((thumbnail) => {
       thumbnail.addEventListener("click", () => {
         const mainImage = productDetailContent.querySelector(".product-detail-main-image img")
-        const thumbnailImg = thumbnail.querySelector("img")
+        const thumbnailImage = thumbnail.querySelector("img")
+
+        mainImage.src = thumbnailImage.src
 
         thumbnails.forEach((t) => t.classList.remove("active"))
         thumbnail.classList.add("active")
-
-        mainImage.src = thumbnailImg.src
       })
     })
 
-    ratingStars.forEach((star) => {
-      star.addEventListener("mouseover", () => {
-        const rating = Number.parseInt(star.dataset.rating)
+    tabBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const tab = btn.dataset.tab
 
-        ratingStars.forEach((s, index) => {
-          if (index < rating) {
-            s.className = "fas fa-star"
-          } else {
-            s.className = "far fa-star"
-          }
-        })
-      })
+        tabBtns.forEach((b) => b.classList.remove("active"))
+        btn.classList.add("active")
 
-      star.addEventListener("mouseout", () => {
-        ratingStars.forEach((s) => {
-          s.className = "far fa-star"
-        })
-      })
-
-      star.addEventListener("click", () => {
-        const rating = Number.parseInt(star.dataset.rating)
-
-        ratingStars.forEach((s, index) => {
-          if (index < rating) {
-            s.className = "fas fa-star"
-          } else {
-            s.className = "far fa-star"
-          }
-        })
+        tabPanels.forEach((panel) => panel.classList.remove("active"))
+        productDetailContent.querySelector(`#${tab}`).classList.add("active")
       })
     })
 
-    loadMoreReviewsBtn.addEventListener("click", () => {
-      alert("Ko'proq sharhlarni yuklash funksiyasi statik HTML uchun qayta ishlanishi kerak")
-    })
-
-    // Show modal
+    // Show product detail modal
     productDetailModal.classList.add("show")
     document.body.style.overflow = "hidden"
   }
@@ -1861,57 +1303,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Cart functions
   function addToCart(productId, quantity) {
-    // Find the product card with the matching ID
-    const productCard = document.querySelector(`.product-card[data-id="${productId}"]`)
+    // Check if the product is already in the cart
+    const existingProduct = cart.find((item) => item.id === productId)
 
-    if (!productCard) return
-
-    // Extract product information from the card
-    const productTitle = productCard.querySelector(".product-title").textContent
-    const productImage = productCard.querySelector(".product-image img").src
-    const productPriceText = productCard.querySelector(".current-price").textContent
-    const productPrice = Number.parseInt(productPriceText.replace(/\D/g, ""))
-
-    const existingItem = cart.find((item) => item.id === productId)
-
-    if (existingItem) {
-      existingItem.quantity += quantity
+    if (existingProduct) {
+      // If it exists, update the quantity
+      existingProduct.quantity += quantity
     } else {
-      cart.push({
-        id: productId,
-        title: productTitle,
-        price: productPrice,
-        image: productImage,
-        quantity: quantity,
-      })
+      // Otherwise add it to the cart
+      cart.push({ id: productId, quantity })
     }
 
-    updateCartCount()
-    saveCart()
-  }
-
-  function removeFromCart(productId) {
-    cart = cart.filter((item) => item.id !== productId)
-    updateCartCount()
+    // Save cart to localStorage
     saveCart()
 
-    if (cartItemsList) {
-      renderCart()
-    }
-  }
+    // Update cart count
+    updateCartCount()
 
-  function updateCartCount() {
-    if (!cartCount) return
+    // Render cart
+    renderCart()
 
-    const totalItems = cart.reduce((total, item) => total + item.quantity, 0)
-
-    cartCount.textContent = totalItems
-
-    if (totalItems > 0) {
-      cartCount.style.display = "flex"
-    } else {
-      cartCount.style.display = "none"
-    }
+    // Update cart preview on homepage
+    updateCartPreview()
   }
 
   function saveCart() {
@@ -1920,55 +1333,235 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function loadCart() {
     const savedCart = localStorage.getItem("cart")
+    cart = savedCart ? JSON.parse(savedCart) : []
+    updateCartCount()
+  }
 
-    if (savedCart) {
-      cart = JSON.parse(savedCart)
-      updateCartCount()
+  function updateCartCount() {
+    if (!cartCount) return
+
+    let totalCount = 0
+    cart.forEach((item) => {
+      totalCount += item.quantity
+    })
+
+    cartCount.textContent = totalCount
+  }
+
+  function showNotification() {
+    if (!cartNotification) return
+
+    cartNotification.classList.add("show")
+
+    setTimeout(() => {
+      cartNotification.classList.remove("show")
+    }, 3000)
+  }
+
+  function renderCart() {
+    if (!cartContent || !emptyCart || !cartItemsList || !cartTotalCount || !cartSubtotal || !cartDiscount || !cartTotal)
+      return
+
+    if (cart.length === 0) {
+      emptyCart.classList.add("show")
+      cartContent.classList.remove("show")
+      return
     }
+
+    emptyCart.classList.remove("show")
+    cartContent.classList.add("show")
+
+    // Clear cart items list
+    cartItemsList.innerHTML = ""
+
+    let subtotal = 0
+    let discount = 0
+    let total = 0
+
+    cart.forEach((item) => {
+      // Find the product card with the matching ID
+      const productCard = document.querySelector(`.product-card[data-id="${item.id}"]`)
+
+      if (!productCard) return
+
+      // Extract product information from the card
+      const productTitle = productCard.querySelector(".product-title").textContent
+      const productImage = productCard.querySelector(".product-image img").src
+      const productPrice = productCard.querySelector(".current-price").textContent
+
+      // Create cart item
+      const cartItem = document.createElement("li")
+      cartItem.className = "cart-item"
+      cartItem.innerHTML = `
+        <div class="cart-item-image">
+          <img src="${productImage}" alt="${productTitle}">
+        </div>
+        <div class="cart-item-info">
+          <h3 class="cart-item-title">${productTitle}</h3>
+          <span class="cart-item-price">${productPrice}</span>
+          <div class="cart-item-quantity">
+            <button class="quantity-btn minus" data-id="${item.id}">-</button>
+            <input type="number" class="quantity-input" value="${item.quantity}" min="1" max="100" data-id="${item.id}">
+            <button class="quantity-btn plus" data-id="${item.id}">+</button>
+          </div>
+        </div>
+        <button class="cart-item-remove" data-id="${item.id}"><i class="fas fa-times"></i></button>
+      `
+
+      // Add event listeners for cart item
+      const minusBtn = cartItem.querySelector(".quantity-btn.minus")
+      const plusBtn = cartItem.querySelector(".quantity-btn.plus")
+      const quantityInput = cartItem.querySelector(".quantity-input")
+      const removeBtn = cartItem.querySelector(".cart-item-remove")
+
+      minusBtn.addEventListener("click", () => {
+        if (item.quantity > 1) {
+          item.quantity--
+          quantityInput.value = item.quantity
+          saveCart()
+          updateCartCount()
+          renderCart()
+        }
+      })
+
+      plusBtn.addEventListener("click", () => {
+        item.quantity++
+        quantityInput.value = item.quantity
+        saveCart()
+        updateCartCount()
+        renderCart()
+      })
+
+      quantityInput.addEventListener("change", () => {
+        const newQuantity = Number.parseInt(quantityInput.value)
+        if (newQuantity >= 1 && newQuantity <= 100) {
+          item.quantity = newQuantity
+          saveCart()
+          updateCartCount()
+          renderCart()
+        } else {
+          quantityInput.value = item.quantity
+        }
+      })
+
+      removeBtn.addEventListener("click", () => {
+        cart = cart.filter((cartItem) => cartItem.id !== item.id)
+        saveCart()
+        updateCartCount()
+        renderCart()
+      })
+
+      // Add cart item to list
+      cartItemsList.appendChild(cartItem)
+
+      // Update subtotal
+      subtotal += Number.parseFloat(productPrice.replace(/[^0-9.-]+/g, "")) * item.quantity
+    })
+
+    // Calculate discount (example: 10%)
+    discount = subtotal * 0.1
+
+    // Calculate total
+    total = subtotal - discount
+
+    // Update cart totals
+    cartSubtotal.textContent = subtotal.toFixed(2) + " so'm"
+    cartDiscount.textContent = discount.toFixed(2) + " so'm"
+    cartTotal.textContent = total.toFixed(2) + " so'm"
+    cartTotalCount.textContent = total.toFixed(2) + " so'm"
   }
 
   function clearCart() {
     cart = []
-    updateCartCount()
     saveCart()
-
-    if (cartItemsList) {
-      renderCart()
-    }
+    updateCartCount()
+    renderCart()
+    updateCartPreview()
   }
 
-  function renderCart() {
-    if (!cartContent || !emptyCart || !cartItemsList) return
+  function checkout() {
+    alert("Buyurtma qabul qilindi!")
+    clearCart()
+  }
 
-    if (cart.length === 0) {
-      cartContent.style.display = "none"
-      emptyCart.style.display = "flex"
+  // Contact form
+  function handleContactFormSubmit(e) {
+    e.preventDefault()
+
+    const name = document.getElementById("contact-name").value
+    const surname = document.getElementById("contact-surname").value
+    const email = document.getElementById("contact-email").value
+    const message = document.getElementById("contact-message").value
+
+    // Simple validation
+    if (!name || !surname || !email || !message) {
+      alert("Iltimos, barcha maydonlarni to'ldiring!")
       return
     }
 
-    cartContent.style.display = "grid"
-    emptyCart.style.display = "none"
+    // Simulate sending the form
+    setTimeout(() => {
+      document.getElementById("contact-success").classList.add("show")
+      document.getElementById("contact-form").reset()
 
-    cartItemsList.innerHTML = ""
+      setTimeout(() => {
+        document.getElementById("contact-success").classList.remove("show")
+      }, 5000)
+    }, 1000)
+  }
+
+  // Add the updateCartPreview function after the renderCart function:
+  function updateCartPreview() {
+    const cartContentPreview = document.getElementById("cart-content-preview")
+    const emptyCartPreview = document.getElementById("empty-cart-preview")
+    const cartItemsListPreview = document.getElementById("cart-items-list-preview")
+    const cartTotalCountPreview = document.getElementById("cart-total-count-preview")
+    const cartSubtotalPreview = document.getElementById("cart-subtotal-preview")
+    const cartDiscountPreview = document.getElementById("cart-discount-preview")
+    const cartTotalPreview = document.getElementById("cart-total-preview")
+
+    if (!cartContentPreview || !emptyCartPreview || !cartItemsListPreview) return
+
+    if (cart.length === 0) {
+      if (emptyCartPreview) emptyCartPreview.style.display = "flex"
+      if (cartContentPreview) cartContentPreview.style.display = "none"
+      return
+    }
+
+    if (emptyCartPreview) emptyCartPreview.style.display = "none"
+    if (cartContentPreview) cartContentPreview.style.display = "grid"
+
+    // Clear cart items list
+    if (cartItemsListPreview) cartItemsListPreview.innerHTML = ""
 
     let subtotal = 0
-    const discount = 0
+    let discount = 0
+    let total = 0
+    let itemCount = 0
 
     cart.forEach((item) => {
-      const itemTotal = item.price * item.quantity
-      subtotal += itemTotal
+      // Find the product card with the matching ID
+      const productCard = document.querySelector(`.product-card[data-id="${item.id}"]`)
 
+      if (!productCard) return
+
+      // Extract product information from the card
+      const productTitle = productCard.querySelector(".product-title").textContent
+      const productImage = productCard.querySelector(".product-image img").src
+      const productPrice = productCard.querySelector(".current-price").textContent
+      const priceValue = Number.parseFloat(productPrice.replace(/[^0-9.-]+/g, ""))
+
+      // Create cart item
       const cartItem = document.createElement("div")
       cartItem.className = "cart-item"
-
       cartItem.innerHTML = `
       <input type="checkbox" class="cart-item-checkbox" checked>
       <div class="cart-item-image">
-        <img src="${item.image}" alt="${item.title}">
+        <img src="${productImage}" alt="${productTitle}">
       </div>
       <div class="cart-item-details">
-        <h3 class="cart-item-title">${item.title}</h3>
-        <div class="cart-item-price">${formatPrice(item.price)}</div>
+        <h3 class="cart-item-title">${productTitle}</h3>
+        <div class="cart-item-price">${productPrice}</div>
       </div>
       <div class="cart-item-actions">
         <div class="quantity-control">
@@ -1980,114 +1573,69 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     `
 
-      cartItemsList.appendChild(cartItem)
-    })
+      // Add event listeners for cart item
+      const minusBtn = cartItem.querySelector(".quantity-btn.minus")
+      const plusBtn = cartItem.querySelector(".quantity-btn.plus")
+      const quantityInput = cartItem.querySelector(".quantity-input")
+      const removeBtn = cartItem.querySelector(".remove-item")
 
-    // Add event listeners for cart item actions
-    const minusButtons = cartItemsList.querySelectorAll(".quantity-btn.minus")
-    const plusButtons = cartItemsList.querySelectorAll(".quantity-btn.plus")
-    const quantityInputs = cartItemsList.querySelectorAll(".quantity-input")
-    const removeButtons = cartItemsList.querySelectorAll(".remove-item")
-
-    minusButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        const productId = Number.parseInt(button.dataset.id)
-        const item = cart.find((item) => item.id === productId)
-
-        if (item && item.quantity > 1) {
+      minusBtn.addEventListener("click", () => {
+        if (item.quantity > 1) {
           item.quantity--
-          updateCartCount()
+          quantityInput.value = item.quantity
           saveCart()
-          renderCart()
+          updateCartCount()
+          updateCartPreview()
         }
       })
-    })
 
-    plusButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        const productId = Number.parseInt(button.dataset.id)
-        const item = cart.find((item) => item.id === productId)
-
-        if (item) {
-          item.quantity++
-          updateCartCount()
-          saveCart()
-          renderCart()
-        }
+      plusBtn.addEventListener("click", () => {
+        item.quantity++
+        quantityInput.value = item.quantity
+        saveCart()
+        updateCartCount()
+        updateCartPreview()
       })
-    })
 
-    quantityInputs.forEach((input) => {
-      input.addEventListener("change", () => {
-        const productId = Number.parseInt(input.dataset.id)
-        const item = cart.find((item) => item.id === productId)
-        const newQuantity = Number.parseInt(input.value)
-
-        if (item && newQuantity > 0) {
+      quantityInput.addEventListener("change", () => {
+        const newQuantity = Number.parseInt(quantityInput.value)
+        if (newQuantity >= 1 && newQuantity <= 100) {
           item.quantity = newQuantity
-          updateCartCount()
           saveCart()
-          renderCart()
+          updateCartCount()
+          updateCartPreview()
+        } else {
+          quantityInput.value = item.quantity
         }
       })
-    })
 
-    removeButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        const productId = Number.parseInt(button.dataset.id)
-        removeFromCart(productId)
+      removeBtn.addEventListener("click", () => {
+        cart = cart.filter((cartItem) => cartItem.id !== item.id)
+        saveCart()
+        updateCartCount()
+        updateCartPreview()
       })
+
+      // Add cart item to list
+      if (cartItemsListPreview) cartItemsListPreview.appendChild(cartItem)
+
+      // Update subtotal
+      subtotal += priceValue * item.quantity
+      itemCount += item.quantity
     })
 
-    // Update cart summary
-    const totalItems = cart.reduce((total, item) => total + item.quantity, 0)
-    const total = subtotal - discount
+    // Calculate discount (example: 10%)
+    discount = subtotal * 0.1
 
-    if (cartTotalCount) cartTotalCount.textContent = `${totalItems} dona`
-    if (cartSubtotal) cartSubtotal.textContent = formatPrice(subtotal)
-    if (cartDiscount) cartDiscount.textContent = formatPrice(discount)
-    if (cartTotal) cartTotal.textContent = formatPrice(total)
+    // Calculate total
+    total = subtotal - discount
+
+    // Update cart totals
+    if (cartTotalCountPreview) cartTotalCountPreview.textContent = `${itemCount} dona`
+    if (cartSubtotalPreview) cartSubtotalPreview.textContent = `${subtotal.toFixed(2)} so'm`
+    if (cartDiscountPreview) cartDiscountPreview.textContent = `${discount.toFixed(2)} so'm`
+    if (cartTotalPreview) cartTotalPreview.textContent = `${total.toFixed(2)} so'm`
   }
 
-  function checkout() {
-    alert("Buyurtmangiz muvaffaqiyatli qabul qilindi!")
-    clearCart()
-  }
-
-  // Show notification
-  function showNotification() {
-    if (!cartNotification) return
-
-    cartNotification.classList.add("show")
-
-    setTimeout(() => {
-      cartNotification.classList.remove("show")
-    }, 3000)
-  }
-
-  // Contact form
-  function handleContactFormSubmit(e) {
-    e.preventDefault()
-
-    const nameInput = contactForm.querySelector("#contact-name")
-    const surnameInput = contactForm.querySelector("#contact-surname")
-    const emailInput = contactForm.querySelector("#contact-email")
-    const messageInput = contactForm.querySelector("#contact-message")
-
-    if (!nameInput.value || !surnameInput.value || !emailInput.value || !messageInput.value) {
-      alert("Iltimos, barcha maydonlarni to'ldiring!")
-      return
-    }
-
-    alert("Xabaringiz muvaffaqiyatli yuborildi!")
-    contactForm.reset()
-  }
-
-  // Helper functions
-  function formatPrice(price) {
-    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " so'm"
-  }
-
-  // Initialize the page
   init()
 })

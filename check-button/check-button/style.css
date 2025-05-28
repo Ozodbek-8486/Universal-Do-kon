@@ -1,0 +1,304 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Default light theme variables */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --button-bg: #f0f0f0;
+  --button-text: #333333;
+  --button-border: rgba(0, 0, 0, 0.1);
+  --button-hover: #e0e0e0;
+  --button-active: #d0d0d0;
+  --selected-bg: #ffe8dd;
+  --selected-text: #ff6b35;
+  --selected-border: rgba(255, 107, 53, 0.3);
+  --disabled-opacity: 0.6;
+  --next-button-bg: #ff6b35;
+  --next-button-text: white;
+  --next-button-disabled-bg: #ffcbb8;
+  --limit-text: rgba(0, 0, 0, 0.6);
+  --limit-reached-text: #ff6b35;
+}
+
+/* Dark theme variables - only applied when .dark-theme class is present */
+.dark-theme {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --button-bg: rgba(39, 39, 42, 0.5);
+  --button-text: rgb(161, 161, 170);
+  --button-border: hsla(0, 0%, 100%, 0.06);
+  --button-hover: rgba(39, 39, 42, 0.8);
+  --button-active: rgba(39, 39, 42, 0.9);
+  --selected-bg: #2a1711;
+  --selected-text: #ff9066;
+  --selected-border: hsla(0, 0%, 100%, 0.12);
+  --disabled-opacity: 0.5;
+  --next-button-bg: #ff9066;
+  --next-button-text: #000000;
+  --next-button-disabled-bg: #5a3d36;
+  --limit-text: rgba(255, 255, 255, 0.7);
+  --limit-reached-text: #ff9066;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  padding: 24px;
+  padding-top: 160px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 570px;
+  margin: 0 auto;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+.theme-switch {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.switch-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #222;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s;
+}
+
+.switch-icon {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  color: #fff;
+}
+
+.switch-thumb {
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dark-theme .switch-thumb {
+  transform: translateX(30px);
+}
+
+/* Default light theme icon is highlighted */
+.light-icon {
+  color: #ffb700;
+}
+
+/* Dark theme icon is dimmed by default */
+.dark-icon {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* When dark theme is active, swap the highlighting */
+.dark-theme .light-icon {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.dark-theme .dark-icon {
+  color: #ffb700;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.limit-message {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  color: var(--limit-text);
+  font-size: 0.875rem;
+}
+
+.limit-message .count {
+  font-weight: 600;
+}
+
+.limit-message.limit-reached {
+  color: var(--limit-reached-text);
+}
+
+.cuisine-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.cuisine-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  box-shadow: 0 0 0 1px var(--button-border);
+  transition: all 0.2s ease;
+}
+
+.cuisine-button:hover {
+  background-color: var(--button-hover);
+}
+
+.cuisine-button:active {
+  background-color: var(--button-active);
+}
+
+.cuisine-button.selected {
+  background-color: var(--selected-bg);
+  color: var(--selected-text);
+  box-shadow: 0 0 0 1px var(--selected-border);
+}
+
+.cuisine-button.selected:hover {
+  background-color: var(--selected-bg);
+}
+
+.cuisine-button.selected:active {
+  background-color: var(--selected-bg);
+}
+
+.cuisine-button.disabled {
+  opacity: var(--disabled-opacity);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.cuisine-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: padding-right 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cuisine-button.selected .cuisine-content {
+  padding-right: 1.5rem;
+}
+
+.check-icon {
+  position: absolute;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--selected-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              opacity 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cuisine-button.selected .check-icon {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.check-icon svg {
+  width: 12px;
+  height: 12px;
+  color: var(--selected-bg);
+}
+
+.next-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.next-button {
+  padding: 12px 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: var(--next-button-bg);
+  color: var(--next-button-text);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.next-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.next-button:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.next-button:disabled {
+  background-color: var(--next-button-disabled-bg);
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  body {
+    padding-top: 100px;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .cuisine-grid {
+    gap: 8px;
+  }
+  
+  .cuisine-button {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}

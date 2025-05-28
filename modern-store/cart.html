@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Savat | TechZone</title>
+  <title>Savatcha | Zenwood</title>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -71,7 +71,7 @@
             </div>
             
             <div class="language-dropdown">
-              <button class="language-btn">
+              <button class="language-btn" id="language-btn">
                 <img src="https://placehold.co/20x20/333/fff?text=UZ" alt="O'zbekcha">
                 <span>O'zbekcha</span>
                 <i class="fas fa-chevron-down"></i>
@@ -214,7 +214,7 @@
   <!-- Cart Section -->
   <section class="cart-section">
     <div class="container">
-      <h1 class="page-title">Savat</h1>
+      <h2 class="page-title">Savatcha</h2>
       
       <div class="empty-cart" id="empty-cart" style="display: none;">
         <div class="empty-cart-image">
@@ -236,7 +236,7 @@
           </div>
           
           <div class="cart-items-list" id="cart-items-list">
-            <!-- Cart items will be inserted here by JavaScript -->
+            <!-- Cart items will be dynamically added here -->
           </div>
         </div>
         
@@ -245,7 +245,7 @@
             <h3 class="summary-title">Buyurtma ma'lumotlari</h3>
             <div class="summary-row">
               <span>Mahsulotlar:</span>
-              <span id="cart-total-count">0 dona</span>
+              <span id="cart-items-count">0 dona</span>
             </div>
             <div class="summary-row">
               <span>Jami:</span>
@@ -276,7 +276,6 @@
               <h4>To'lov usuli</h4>
               <div class="payment-option">
                 <input type="radio" id="payment-card" name="payment" checked>
-                <label for="payment-card">Karta orqali</label>  name="payment" checked>
                 <label for="payment-card">Karta orqali</label>
               </div>
               <div class="payment-option">
@@ -289,57 +288,75 @@
               </div>
             </div>
             
-            <a href="./payment-card.html" class="checkout-btn" id="checkout-btn">Buyurtma berish</a>
+            <button class="checkout-btn" id="checkout-btn">Buyurtma berish</button>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Cart Notification -->
+  <div class="cart-notification" id="cart-notification">
+    <div class="notification-icon">
+      <i class="fas fa-check"></i>
+    </div>
+    <div class="notification-content">
+      <span>Mahsulot savatga qo'shildi!</span>
+    </div>
+    <button class="notification-close" id="notification-close">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Modern Footer -->
   <footer class="footer">
+  <div class="footer-top">
     <div class="container">
-      <div class="footer-top">
-        <div class="footer-column">
+      <div class="footer-row">
+        <div class="footer-col">
           <div class="footer-logo">
-            <img src="./img/l34lGjplOIrJWo9PbhujrGmeuA.avif" alt="TechZone">
-            <h2>Zenwood</h2>
+            <img src="https://placehold.co/150x50/333/fff?text=Zenwood" alt="Zenwood">
           </div>
-          <p class="footer-description">Zamonaviy texnologiyalar va gadjetlar do'koni. Biz sifatli mahsulotlar va ajoyib xizmat bilan mijozlarimizga xizmat ko'rsatishdan faxrlanamiz.</p>
-          <div class="social-links">
+          <p class="footer-description">Bizning do'konimizda siz eng so'nggi texnologiyalarni topasiz. Yuqori sifatli mahsulotlar va ajoyib xizmat bilan ta'minlaymiz.</p>
+          <div class="footer-social">
             <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
             <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
             <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
             <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
-        <div class="footer-column">
-          <h3 class="footer-heading">Kategoriyalar</h3>
+        
+        <div class="footer-col">
+          <h4 class="footer-heading">Kategoriyalar</h4>
           <ul class="footer-links">
             <li><a href="#">Smartfonlar</a></li>
             <li><a href="#">Noutbuklar</a></li>
             <li><a href="#">Planshetlar</a></li>
             <li><a href="#">Televizorlar</a></li>
             <li><a href="#">Audio</a></li>
-            <li><a href="#">Kameralar</a></li>
             <li><a href="#">Aksessuarlar</a></li>
           </ul>
         </div>
-        <div class="footer-column">
-          <h3 class="footer-heading">Ma'lumot</h3>
+        
+        <div class="footer-col">
+          <h4 class="footer-heading">Ma'lumot</h4>
           <ul class="footer-links">
             <li><a href="#">Biz haqimizda</a></li>
             <li><a href="#">Yetkazib berish</a></li>
             <li><a href="#">To'lov usullari</a></li>
             <li><a href="#">Kafolat shartlari</a></li>
             <li><a href="#">Maxfiylik siyosati</a></li>
-            <li><a href="#">Foydalanish shartlari</a></li>
             <li><a href="#">Ko'p so'raladigan savollar</a></li>
           </ul>
         </div>
-        <div class="footer-column">
-          <h3 class="footer-heading">Mijozlarga xizmat</h3>
+        
+        <div class="footer-col">
+          <h4 class="footer-heading">Mijozlarga xizmat</h4>
           <ul class="footer-links">
             <li><a href="#">Mening hisobim</a></li>
             <li><a href="#">Buyurtmalar tarixi</a></li>
@@ -347,69 +364,89 @@
             <li><a href="#">Qaytarish</a></li>
             <li><a href="#">Qo'llab-quvvatlash</a></li>
             <li><a href="#">Shikoyatlar</a></li>
-            <li><a href="#">Aloqa</a></li>
           </ul>
         </div>
-        <div class="footer-column">
-          <h3 class="footer-heading">Biz bilan bog'lanish</h3>
+        
+        <div class="footer-col">
+          <h4 class="footer-heading">Biz bilan bog'lanish</h4>
           <ul class="contact-info">
-            <li><i class="fas fa-map-marker-alt"></i> <span>Toshkent sh., Mustaqillik ko'chasi, 15-uy</span></li>
-            <li><i class="fas fa-phone"></i> <span>+998 90 123 45 67</span></li>
-            <li><i class="fas fa-envelope"></i> <span>info@techzone.uz</span></li>
-            <li><i class="fas fa-clock"></i> <span>Ish vaqti: 9:00 - 20:00</span></li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Toshkent sh., Chilonzor tumani, 7-mavze, 34-uy</span>
+            </li>
+            <li>
+              <i class="fas fa-phone-alt"></i>
+              <span>+998 71 123 45 67</span>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <span>info@zenwood.uz</span>
+            </li>
+            <li>
+              <i class="fas fa-clock"></i>
+              <span>Dushanba-Juma: 9:00 - 18:00</span>
+            </li>
           </ul>
+        </div>
+      </div>
+      
+      <div class="footer-row">
+        <div class="footer-col">
+          <h4 class="footer-heading">Ilovani yuklab oling</h4>
           <div class="app-downloads">
-            <h4>Mobil ilovamizni yuklab oling</h4>
-            <div class="app-buttons">
-              <a href="#" class="app-button">
-                <img src="https://placehold.co/120x40/333/fff?text=App+Store" alt="App Store">
-              </a>
-              <a href="#" class="app-button">
-                <img src="https://placehold.co/120x40/333/fff?text=Google+Play" alt="Google Play">
-              </a>
-            </div>
+            <a href="#" class="app-btn">
+              <i class="fab fa-google-play"></i>
+              <div class="app-btn-text">
+                <span>Google Play</span>
+                <strong>Yuklab olish</strong>
+              </div>
+            </a>
+            <a href="#" class="app-btn">
+              <i class="fab fa-apple"></i>
+              <div class="app-btn-text">
+                <span>App Store</span>
+                <strong>Yuklab olish</strong>
+              </div>
+            </a>
           </div>
         </div>
-      </div>
-      <div class="footer-middle">
-        <div class="payment-methods">
-          <h4>To'lov usullari</h4>
-          <div class="payment-icons">
-            <img src="https://placehold.co/50x30/333/fff?text=Visa" alt="Visa">
-            <img src="https://placehold.co/50x30/333/fff?text=MasterCard" alt="MasterCard">
-            <img src="https://placehold.co/50x30/333/fff?text=PayPal" alt="PayPal">
-            <img src="https://placehold.co/50x30/333/fff?text=Uzcard" alt="Uzcard">
-            <img src="https://placehold.co/50x30/333/fff?text=Humo" alt="Humo">
-            <img src="https://placehold.co/50x30/333/fff?text=Click" alt="Click">
-            <img src="https://placehold.co/50x30/333/fff?text=Payme" alt="Payme">
+        
+        <div class="footer-col">
+          <h4 class="footer-heading">To'lov usullari</h4>
+          <div class="payment-methods">
+            <img src="https://placehold.co/40x25/333/fff?text=VISA" alt="Visa">
+            <img src="https://placehold.co/40x25/333/fff?text=MC" alt="MasterCard">
+            <img src="https://placehold.co/40x25/333/fff?text=UZCARD" alt="UzCard">
+            <img src="https://placehold.co/40x25/333/fff?text=HUMO" alt="Humo">
           </div>
         </div>
-        <div class="partners">
-          <h4>Hamkorlar</h4>
-          <div class="partner-logos">
-            <img src="https://placehold.co/80x40/333/fff?text=Apple" alt="Apple">
-            <img src="https://placehold.co/80x40/333/fff?text=Samsung" alt="Samsung">
-            <img src="https://placehold.co/80x40/333/fff?text=Sony" alt="Sony">
-            <img src="https://placehold.co/80x40/333/fff?text=LG" alt="LG">
-            <img src="https://placehold.co/80x40/333/fff?text=HP" alt="HP">
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p class="copyright">&copy; 2025 TechZone. Barcha huquqlar himoyalangan.</p>
-        <div class="footer-nav">
-          <a href="#">Maxfiylik siyosati</a>
-          <a href="#">Foydalanish shartlari</a>
-          <a href="#">Sayt xaritasi</a>
+        
+        <div class="footer-col newsletter-col">
+          <h4 class="footer-heading">Yangiliklardan xabardor bo'ling</h4>
+          <p>Elektron pochtangizni kiriting va yangiliklardan xabardor bo'ling</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Elektron pochta manzilingiz" class="newsletter-input">
+            <button type="submit" class="newsletter-btn">Obuna bo'lish</button>
+          </form>
         </div>
       </div>
     </div>
-  </footer>
+  </div>
+  
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="copyright">
+        © 2025 Zenwood. Barcha huquqlar himoyalangan.
+      </div>
+      <div class="footer-nav">
+        <a href="#">Maxfiylik siyosati</a>
+        <a href="#">Foydalanish shartlari</a>
+        <a href="#">Sayt xaritasi</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
-  <!-- Back to Top Button -->
-  <button class="back-to-top" id="back-to-top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
 
   <script src="./js/script.js"></script>
 </body>

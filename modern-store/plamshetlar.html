@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planshetlar | Zenwood</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-mode">
+  <!-- Header -->
+  <header class="header">
+    <div class="top-header">
+      <div class="container">
+        <div class="top-header-content">
+          <div class="logo-container">
+            <div class="logo">
+              <a href="index.html" class="logo-link">
+                <img src="/placeholder.svg?height=50&width=50" alt="TechZone" style="width: 50px;height: 50px;">
+                <span>Zenwood</span>
+              </a>
+            </div>
+            
+            <div class="main-categories-dropdown">
+              <button class="categories-btn" id="categories-btn">
+                <i class="fas fa-bars"></i>
+                <span>Kategoriyalar</span>
+              </button>
+              <div class="main-categories-menu" id="main-categories-menu">
+                <div class="categories-grid">
+                  <div class="categories-column">
+                    <h3 class="categories-title">Elektronika</h3>
+                    <ul class="categories-list">
+                      <li><a href="#">Smartfonlar</a></li>
+                      <li><a href="#">Noutbuklar</a></li>
+                      <li><a href="#" class="tablet-link">Planshetlar</a></li>
+                      <li><a href="#">Televizorlar</a></li>
+                      <li><a href="#">Kameralar</a></li>
+                    </ul>
+                  </div>
+                  <div class="categories-column">
+                    <h3 class="categories-title">Kompyuter texnikasi</h3>
+                    <ul class="categories-list">
+                      <li><a href="#">Protsessorlar</a></li>
+                      <li><a href="#">Videokartalar</a></li>
+                      <li><a href="#">Monitorlar</a></li>
+                      <li><a href="#">Klaviaturalar</a></li>
+                      <li><a href="#">Sichqonchalar</a></li>
+                    </ul>
+                  </div>
+                  <div class="categories-column">
+                    <h3 class="categories-title">Maishiy texnika</h3>
+                    <ul class="categories-list">
+                      <li><a href="#">Muzlatgichlar</a></li>
+                      <li><a href="#">Kir yuvish mashinalari</a></li>
+                      <li><a href="#">Gaz plitalari</a></li>
+                      <li><a href="#">Konditsionerlar</a></li>
+                      <li><a href="#">Changyutgichlar</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="right-section">
+            <div class="theme-toggle" id="theme-toggle">
+              <i class="fas fa-sun light-icon"></i>
+              <i class="fas fa-moon dark-icon"></i>
+            </div>
+            
+            <div class="language-dropdown">
+              <button class="language-btn" id="language-btn">
+                <img src="https://placehold.co/20x20/333/fff?text=UZ" alt="O'zbekcha">
+                <span>O'zbekcha</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="language-dropdown-menu">
+                <a href="#" class="language-option active" data-lang="uz">
+                  <img src="https://placehold.co/20x20/333/fff?text=UZ" alt="O'zbekcha">
+                  <span>O'zbekcha</span>
+                </a>
+                <a href="#" class="language-option" data-lang="ru">
+                  <img src="https://placehold.co/20x20/333/fff?text=RU" alt="Русский">
+                  <span>Русский</span>
+                </a>
+                <a href="#" class="language-option" data-lang="en">
+                  <img src="https://placehold.co/20x20/333/fff?text=EN" alt="English">
+                  <span>English</span>
+                </a>
+              </div>
+            </div>
+            
+            <div class="user-account-dropdown">
+              <button class="account-btn">
+                <i class="fas fa-user"></i>
+                <span>Hisob</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="account-dropdown-menu">
+                <a href="#" class="account-option">
+                  <i class="fas fa-sign-in-alt"></i>
+                  <span>Kirish</span>
+                </a>
+                <a href="#" class="account-option">
+                  <i class="fas fa-user-plus"></i>
+                  <span>Register</span>
+                </a>
+                <a href="#" class="account-option">
+                  <i class="fas fa-question-circle"></i>
+                  <span>Yordam bo'limi</span>
+                </a>
+                <a href="#" class="account-option">
+                  <i class="fas fa-sign-out-alt"></i>
+                  <span>Xisobdan chiqish</span>
+                </a>
+              </div>
+            </div>
+            <button class="search-trigger" id="search-trigger">
+              <i class="fas fa-search"></i>
+            </button>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+              <i class="fas fa-ellipsis-v"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="header-divider"></div>
+    
+    <div class="bottom-header">
+      <div class="container">
+        <div class="bottom-header-content">
+          <nav class="main-nav" id="main-nav">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link" style="white-space: nowrap;">Bosh sahifa</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link">Kategoriyalar <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-menu">
+                  <div class="dropdown-grid">
+                    <div class="dropdown-column">
+                      <h3 class="dropdown-title">Elektronika</h3>
+                      <ul class="dropdown-list">
+                        <li><a href="#">Smartfonlar</a></li>
+                        <li><a href="#">Noutbuklar</a></li>
+                        <li><a href="#" class="tablet-link">Planshetlar</a></li>
+                        <li><a href="#">Televizorlar</a></li>
+                        <li><a href="#">Kameralar</a></li>
+                      </ul>
+                    </div>
+                    <div class="dropdown-column">
+                      <h3 class="dropdown-title">Kompyuter texnikasi</h3>
+                      <ul class="dropdown-list">
+                        <li><a href="#">Protsessorlar</a></li>
+                        <li><a href="#">Videokartalar</a></li>
+                        <li><a href="#">Monitorlar</a></li>
+                        <li><a href="#">Klaviaturalar</a></li>
+                        <li><a href="#">Sichqonchalar</a></li>
+                      </ul>
+                    </div>
+                    <div class="dropdown-column">
+                      <h3 class="dropdown-title">Maishiy texnika</h3>
+                      <ul class="dropdown-list">
+                        <li><a href="#">Muzlatgichlar</a></li>
+                        <li><a href="#">Kir yuvish mashinalari</a></li>
+                        <li><a href="#">Gaz plitalari</a></li>
+                        <li><a href="#">Konditsionerlar</a></li>
+                        <li><a href="#">Changyutgichlar</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Yangiliklar</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Chegirmalar</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link" style="white-space: nowrap;">Ko'p sotilgan</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link" style="white-space: nowrap;">Yangi kelgan</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Aksiyalar</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link" style="white-space: nowrap;">Biz haqimizda</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Aloqa</a>
+              </li>
+              <li class="nav-item">
+                <div class="cart-icon">
+                  <a href="#" class="action-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- New Warning Section -->
+  <section class="new-warning-section">
+    <div class="container">
+      <div class="new-warning-banner">
+        <div class="warning-icon">
+          <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <div class="warning-content">
+          <h3>Yangi planshetlar keldi!</h3>
+          <p>Eng so'nggi planshetlar va texnologiyalar bilan tanishing. Chegirmalar va maxsus takliflar!</p>
+        </div>
+        <button class="warning-close" id="warning-close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tablets Section -->
+  <section class="tablets-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Planshetlar</h2>
+        <div class="section-filters">
+          <button class="filter-btn active" data-filter="all">Hammasi</button>
+          <button class="filter-btn" data-filter="new">Yangi</button>
+          <button class="filter-btn" data-filter="discount">Chegirma</button>
+          <button class="filter-btn" data-filter="popular">Mashhur</button>
+        </div>
+      </div>
+      
+      <div class="products-grid" id="tablets-grid">
+        <!-- Tablets will be loaded here by JavaScript -->
+      </div>
+
+      <!-- Tablet Advertisement Banner -->
+      <div class="tablet-ad-banner">
+        <div class="ad-content">
+          <div class="ad-text">
+            <h3>Eng yangi iPad Pro M2</h3>
+            <p>M2 chip, Liquid Retina XDR ekran va Apple Pencil bilan professional ishlash</p>
+            <button class="ad-btn">Batafsil ko'rish</button>
+          </div>
+          <div class="ad-image">
+            <img src="/placeholder.svg?height=300&width=400" alt="iPad Pro M2">
+          </div>
+        </div>
+      </div>
+
+      <div class="products-grid" id="tablets-grid-2">
+        <!-- More tablets will be loaded here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="contact-form-section">
+    <div class="container">
+      <div class="contact-form-container">
+        <h2 class="contact-form-title">Biz bilan bog'laning</h2>
+        <form class="contact-form" id="contact-form">
+          <div class="form-group">
+            <label for="contact-name">Ism</label>
+            <input type="text" id="contact-name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-surname">Familiya</label>
+            <input type="text" id="contact-surname" name="surname" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Email</label>
+            <input type="email" id="contact-email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Xabar</label>
+            <textarea id="contact-message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="contact-form-submit">Xabar yuborish</button>
+        </form>
+        <div class="contact-success-message" id="contact-success">
+          Xabaringiz muvaffaqiyatli yuborildi!
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-row">
+          <div class="footer-col">
+            <div class="footer-logo">
+              <img src="https://placehold.co/150x50/333/fff?text=Zenwood" alt="Zenwood">
+            </div>
+            <p class="footer-description">Bizning do'konimizda siz eng so'nggi texnologiyalarni topasiz. Yuqori sifatli mahsulotlar va ajoyib xizmat bilan ta'minlaymiz.</p>
+            <div class="footer-social">
+              <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          
+          <div class="footer-col">
+            <h4 class="footer-heading">Kategoriyalar</h4>
+            <ul class="footer-links">
+              <li><a href="#">Smartfonlar</a></li>
+              <li><a href="#">Noutbuklar</a></li>
+              <li><a href="#">Planshetlar</a></li>
+              <li><a href="#">Televizorlar</a></li>
+              <li><a href="#">Audio</a></li>
+              <li><a href="#">Aksessuarlar</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-col">
+            <h4 class="footer-heading">Ma'lumot</h4>
+            <ul class="footer-links">
+              <li><a href="#">Biz haqimizda</a></li>
+              <li><a href="#">Yetkazib berish</a></li>
+              <li><a href="#">To'lov usullari</a></li>
+              <li><a href="#">Kafolat shartlari</a></li>
+              <li><a href="#">Maxfiylik siyosati</a></li>
+              <li><a href="#">Ko'p so'raladigan savollar</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-col">
+            <h4 class="footer-heading">Mijozlarga xizmat</h4>
+            <ul class="footer-links">
+              <li><a href="#">Mening hisobim</a></li>
+              <li><a href="#">Buyurtmalar tarixi</a></li>
+              <li><a href="#">Istaklar ro'yxati</a></li>
+              <li><a href="#">Qaytarish</a></li>
+              <li><a href="#">Qo'llab-quvvatlash</a></li>
+              <li><a href="#">Shikoyatlar</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-col">
+            <h4 class="footer-heading">Biz bilan bog'lanish</h4>
+            <ul class="contact-info">
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Toshkent sh., Chilonzor tumani, 7-mavze, 34-uy</span>
+              </li>
+              <li>
+                <i class="fas fa-phone-alt"></i>
+                <span>+998 71 123 45 67</span>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <span>info@zenwood.uz</span>
+              </li>
+              <li>
+                <i class="fas fa-clock"></i>
+                <span>Dushanba-Juma: 9:00 - 18:00</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="footer-row">
+          <div class="footer-col">
+            <h4 class="footer-heading">Ilovani yuklab oling</h4>
+            <div class="app-downloads">
+              <a href="#" class="app-btn">
+                <i class="fab fa-google-play"></i>
+                <div class="app-btn-text">
+                  <span>Google Play</span>
+                  <strong>Yuklab olish</strong>
+                </div>
+              </a>
+              <a href="#" class="app-btn">
+                <i class="fab fa-apple"></i>
+                <div class="app-btn-text">
+                  <span>App Store</span>
+                  <strong>Yuklab olish</strong>
+                </div>
+              </a>
+            </div>
+          </div>
+          
+          <div class="footer-col">
+            <h4 class="footer-heading">To'lov usullari</h4>
+            <div class="payment-methods">
+              <img src="https://placehold.co/40x25/333/fff?text=VISA" alt="Visa">
+              <img src="https://placehold.co/40x25/333/fff?text=MC" alt="MasterCard">
+              <img src="https://placehold.co/40x25/333/fff?text=UZCARD" alt="UzCard">
+              <img src="https://placehold.co/40x25/333/fff?text=HUMO" alt="Humo">
+            </div>
+          </div>
+          
+          <div class="footer-col newsletter-col">
+            <h4 class="footer-heading">Yangiliklardan xabardor bo'ling</h4>
+            <p>Elektron pochtangizni kiriting va yangiliklardan xabardor bo'ling</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Elektron pochta manzilingiz" class="newsletter-input">
+              <button type="submit" class="newsletter-btn">Obuna bo'lish</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="copyright">
+          © 2025 Zenwood. Barcha huquqlar himoyalangan.
+        </div>
+        <div class="footer-nav">
+          <a href="#">Maxfiylik siyosati</a>
+          <a href="#">Foydalanish shartlari</a>
+          <a href="#">Sayt xaritasi</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Product Detail Modal -->
+  <div class="product-detail-modal" id="product-detail-modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-container">
+      <button class="modal-close" id="product-detail-close">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="modal-content">
+        <div class="breadcrumb-container" id="breadcrumb-container"></div>
+        <div class="product-detail-content" id="product-detail-content">
+          <!-- Product details will be loaded here -->
+        </div>
+        <div class="recommended-products">
+          <h3>Tavsiya etilgan planshetlar</h3>
+          <div class="recommended-grid" id="recommended-grid">
+            <!-- Recommended products will be loaded here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Notification -->
+  <div class="cart-notification" id="cart-notification">
+    <div class="notification-icon">
+      <i class="fas fa-check"></i>
+    </div>
+    <div class="notification-content">
+      <span>Mahsulot savatga qo'shildi!</span>
+    </div>
+    <button class="notification-close" id="notification-close">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
