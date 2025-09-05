@@ -730,6 +730,7 @@ ol {
 .language-dropdown-menu {
   position: absolute;
   top: 100%;
+  margin-left: 15%;
   right: 0;
   width: 150px;
   padding: var(--spacing-sm);
@@ -771,11 +772,14 @@ ol {
 .light-mode .language-option:hover,
 .light-mode .language-option.active {
   background-color: var(--light-bg);
+  
 }
 
 .dark-mode .language-option:hover,
 .dark-mode .language-option.active {
   background-color: var(--dark-card);
+  background-color: #ff9f00;
+  color: rgb(255, 255, 255);
 }
 
 .language-option img {
@@ -818,6 +822,7 @@ ol {
 
 .light-mode .account-dropdown-menu {
   background-color: var(--light-bg-secondary);
+  margin-left: 10%;
   box-shadow: var(--shadow-md);
 }
 
